@@ -43,14 +43,32 @@
     .syncopeCircle {margin-left: 5vmax}
 }
 
-.barContainer {margin-top: 12vh;width: 60%;padding-left: 30%;}
+.barContainer {margin-top: 12vh;width: 70%;padding-left: 20%;}
 .bar {height: 20vmax;background-color: black;margin: 0.5vmax;}
+.text1 {-ms-transform: rotate(-90deg); /* IE 9 */
+    -ms-transform-origin: center;
+    -webkit-transform: rotate(-90deg); /* Safari 3-8 */
+    -webkit-transform-origin: center;
+    transform: rotate(-90deg);
+    transform-origin: center;
+    color: #c0cfe3;text-align: center;font-size: 1.5vmax;margin-top: 15vmax;
+    }
+
 .bar2 {-ms-transform: rotate(10deg); /* IE 9 */
     -ms-transform-origin: bottom right;
     -webkit-transform: rotate(10deg); /* Safari 3-8 */
     -webkit-transform-origin: bottom right;
     transform: rotate(10deg);
     transform-origin: bottom right}
+.text2 {-ms-transform: rotate(91deg); /* IE 9 */
+-ms-transform-origin: center;
+-webkit-transform: rotate(91deg); /* Safari 3-8 */
+-webkit-transform-origin: center;
+transform: rotate(-89.5deg);
+transform-origin: center;
+color: #c0cfe3;text-align:center;font-size: 1.5vmax;margin-top: 15vmax;
+}
+
 .bar3 {
 -ms-transform: rotate(30deg); /* IE 9 */
 -ms-transform-origin: bottom right;
@@ -80,6 +98,7 @@ transform-origin: bottom right}
 .fb {font-size: 1.8vmax;text-align: right;line-height: 100%;padding-top: 1vmax}
 
 @media only screen and (max-width: 600px){
+    .barContainer{width: 100%;padding-left: 5%}
     .fb {font-size: 2.5vmax;padding-top: 1vmax}
     .menuPad {border-right: none;font-size: 2vmax;text-align: center}
     .menuNo {font-size: 2vmax; color: black; }
@@ -99,8 +118,12 @@ transform-origin: bottom right}
         2018 ESC Guidelines<span class="no600">for the diagnosis and management of syncope</span></a>
               
     <div class="barContainer">
-        <div class="w3-col s1 bar"> </div>
-        <div class="w3-col s1 bar bar2"> </div>
+        <div class="w3-col s1 bar">
+            <div class="text1 quickSand">&nbsp;TRANSIENT</div>
+        </div>
+        <div class="w3-col s1 bar bar2">
+            <div class="text2 quickSand">&nbsp;UNCONTROLLED</div>
+        </div>
         <div class="w3-col s1 bar bar3"> </div>
         <div class="w3-col s1 bar bar4"> </div>
     </div>

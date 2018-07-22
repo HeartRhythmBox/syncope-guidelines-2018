@@ -5,53 +5,21 @@
 <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"> 
+<link rel="stylesheet" type="text/css" href="cssSyncope.css">
 </head>
 <style>
 
-.lightGrey {background-color: #f1f3f4}
-.blue {background-color: #c0cfe3}
-.darkGrey {background-color: #ababab}
-.brown1 {background-color: #b2843d}
-.brown2 {background-color: #7c4c1b}
-.lGTxt {color: #797979}
 
-.quickSand {font-family: 'Quicksand', sans-serif;}
-
-@media only screen and (max-width: 600px) {
-    .no600 {display: none}
-}
-
-.main {
-    margin: 8vh 3vw 1vh 3vw;
-    background: linear-gradient(to bottom, #f1f3f4 40%, #ebf1fc 100%);
-    height: 75vh; 
-}
-
-.syncopeCircle {
-    height: 7vmax;width: 7vmax;
-    background-color: transparent;
-    border-radius: 50%;border: darkgray 0.1vmax solid;
-    margin-left: 10vmax;margin-top: -3vmax;
-    display: inline-block;
-    font-size: 2vmax;line-height: 90%;
-    padding: 0.8vmax;
-    cursor: pointer;
-}
-
-.syncopeCircle:hover .lGTxt {color: black}
-@media only screen and (max-width: 600px) {
-    .syncopeCircle {margin-left: 5vmax}
-}
 
 .barContainer {margin-top: 12vh;width: 70%;padding-left: 20%;}
 .bar {height: 20vmax;background-color: black;margin: 0.5vmax;}
-.text1 {-ms-transform: rotate(-90deg); /* IE 9 */
+.barText {-ms-transform: rotate(-90deg); /* IE 9 */
     -ms-transform-origin: center;
     -webkit-transform: rotate(-90deg); /* Safari 3-8 */
     -webkit-transform-origin: center;
     transform: rotate(-90deg);
     transform-origin: center;
-    color: #c0cfe3;text-align: center;font-size: 1.5vmax;margin-top: 15vmax;
+    color: #c0cfe3;text-align: center;font-size: 1.7vmax;margin-top: 15vmax;
     }
 
 .bar2 {-ms-transform: rotate(10deg); /* IE 9 */
@@ -60,14 +28,6 @@
     -webkit-transform-origin: bottom right;
     transform: rotate(10deg);
     transform-origin: bottom right}
-.text2 {-ms-transform: rotate(91deg); /* IE 9 */
--ms-transform-origin: center;
--webkit-transform: rotate(91deg); /* Safari 3-8 */
--webkit-transform-origin: center;
-transform: rotate(-89.5deg);
-transform-origin: center;
-color: #c0cfe3;text-align:center;font-size: 1.5vmax;margin-top: 15vmax;
-}
 
 .bar3 {
 -ms-transform: rotate(30deg); /* IE 9 */
@@ -76,6 +36,8 @@ color: #c0cfe3;text-align:center;font-size: 1.5vmax;margin-top: 15vmax;
 -webkit-transform-origin: bottom right;
 transform: rotate(30deg);
 transform-origin: bottom right}
+
+
 .bar4 {
     -ms-transform: rotate(60deg); /* IE 9 */
     -ms-transform-origin: bottom right;
@@ -84,54 +46,45 @@ transform-origin: bottom right}
     transform: rotate(60deg);
     transform-origin: bottom right}
 
-.menuNo {font-size: 1vmax;color: #ababab;text-decoration: none}
-.menuItem {
-    font-size: 2vmax;color: black;cursor: pointer;
-    text-decoration: none}
-.menuItem::before {content: "";display: block;width: 0;
-    height: 0.1vmax; background: transparent;
-    -webkit-transition: linear 0.5s; /* Safari */
-    transition: linear 0.5s;    
-}
-.menuItem:hover::before, .menuItem:active::before {width: 100%;background:#ababab}
-.menuPad {padding: 1vmax;border-right: #f1f3f4 0.1vmin solid;text-align: right;line-height: 150%}
-.fb {font-size: 1.8vmax;text-align: right;line-height: 100%;padding-top: 1vmax}
 
-@media only screen and (max-width: 600px){
-    .barContainer{width: 100%;padding-left: 5%}
-    .fb {font-size: 2.5vmax;padding-top: 1vmax}
-    .menuPad {border-right: none;font-size: 2vmax;text-align: center}
-    .menuNo {font-size: 2vmax; color: black; }
-    .menuNo:hover {opacity: 0.7}    
-}
 
 </style>
 
 <div class="main">
-    <div id="topic" class="syncopeCircle" onclick="showTxt(this)">
+    
+    <a href="index.html" class="syncopeCircle" title="home">
         <span class="quickSand lGTxt" style="text-align: left;vertical-align: middle;">
             SYN<br>&nbsp;COPE</span>
-    </div>
+        </a>
     &nbsp;&nbsp;
     <a href="https://academic.oup.com/eurheartj/article/39/21/1883/4939241"  target="_blank"
-    id="topicTxt" class="quickSand lGTxt" style="display: none;text-decoration: none; font-size: 1vmax">
-        2018 ESC Guidelines<span class="no600">for the diagnosis and management of syncope</span></a>
+    class="quickSand lGTxt" style="text-decoration: none; font-size: 1vmax">
+        2018 ESC Guidelines<span class="no600"> for the diagnosis and management of syncope</span></a>
               
     <div class="barContainer">
+        <a href="#tloc" style="text-decoration: none">
         <div class="w3-col s1 bar">
-            <div class="text1 quickSand">&nbsp;TRANSIENT</div>
+            <div class="barText quickSand">&nbsp;TRANSIENT</div>
         </div>
         <div class="w3-col s1 bar bar2">
-            <div class="text2 quickSand">&nbsp;UNCONTROLLED</div>
+            <div class="barText quickSand">&nbsp;UNRESPONSIVE</div>
         </div>
-        <div class="w3-col s1 bar bar3"> </div>
-        <div class="w3-col s1 bar bar4"> </div>
+        <div class="w3-col s1 bar bar3"> 
+            <div class="barText quickSand">&nbsp;UNAWARE</div>
+        </div>
+        <div class="w3-col s1 bar bar4">
+            <div class="barText quickSand">&nbsp;UNCONTROLLED</div>     
+        </div>
+        <span class="w3-container quickSand" style="font-size: 1.5vmax;">
+            due to cerebral hypoperfusion</span>
+        </a>
     </div>
+    
 </div>
 <div class="w3-row quickSand" style="margin-left: 2vw;margin-right: 3vw">
     <div class="w3-col s2 menuPad">
         <a href="" class="menuNo" title="definition">.1</a>
-        <a href="" class="menuItem no600">definition&nbsp;</a>
+        <a href="" class="menuItemActive">definition&nbsp;</a>
     </div>
     <div class="w3-col s2 menuPad">
         <a href="" class="menuNo" title="initial eval">.2</a>
@@ -139,13 +92,13 @@ transform-origin: bottom right}
     </div>
     <div class="w3-col s2 menuPad">
         <a href="" class="menuNo" title="specific tests">.3</a>
-        <a href="" class="menuItem no600">specific tests&nbsp;</a>
+        <a href="" class="menuItem no600">tests&nbsp;</a>
     </div>
-    <div class="w3-col s2 m3 l2 menuPad">
+    <div class="w3-col s2 menuPad">
         <a href="" class="menuNo" title="management">.4</a>
-        <a href="" class="menuItem no600" style="word-wrap: break-word">management&nbsp;</a>
+        <a href="" class="menuItem no600" style="word-wrap: break-word">rx&nbsp;</a>
     </div>
-    <div class="w3-col s4 m3 l4 quickSand fb w3-hover-opacity">
+    <div class="w3-col s4 quickSand fb w3-hover-opacity">
         <a href="https://www.facebook.com/HeartRhythmBox/" style="text-decoration: none;color:  #3B5998; ">
             <i title="@HeartRhythmBox" class="fab fa-facebook" 
             style="border: transparent;"></i><br>
@@ -153,13 +106,48 @@ transform-origin: bottom right}
     </div>
 </div>
 
+<!--pointer-->
+<div onclick="pointer()"><span class="pointer" style="display: none"></span> 
+
+    <div id="tloc" class="block quickSand">    
+    <div class="w3-btn next" onmouseover="next(1)"></div>
+       <div class="w3-container w3-center" style="font-size: 3.5vmax;padding: 1vmax;font-weight: 800">
+           Transient Loss of Consciousness (T-LOC)
+       </div>
+       <ul class="w3-ul quickSand" style="padding: 2vmax">
+            <li class="lightGrey" style="padding: 2vmax">
+                <span style="font-size: 2.5vmax;font-weight: 900">TRANSIENT</span><br>
+                <span style="font-size: 2vmax">short duration; <5mins</span>
+            </li>
+            <li class="blue" style="padding: 2vmax">
+                <span style="font-size: 2.5vmax;font-weight: 900">UNRESPONSIVE</span><br>
+                <span style="font-size: 2vmax">no response to speech/touch/pain. required witness.</span>
+            </li>
+            <li class="brown1" style="padding: 2vmax">
+                <span style="font-size: 2.5vmax;font-weight: 900">UNAWARE</span><br>
+                <span style="font-size: 2vmax">loss of memory.</span>
+            </li>
+            <li class="brown2" style="padding: 2vmax">
+                <span style="font-size: 2.5vmax;font-weight: 900">UNCONTROLLED</span><br>
+                <span style="font-size: 2vmax">fall, abnormal movement.</span>
+                </li>
+        </ul>
+    </div>
 
 
+
+<!--end pointer div-->
+</div>
+
+
+<script src="JF_next_pointer.js"></script>
 <script>
-function showTxt(name){
-    var id = name.id + 'Txt';
-    document.getElementById(id).style.display = "inline";
-}
+window.addEventListener("keydown", function(event) {
+        event.preventDefault();
+        if (event.keyCode===32) {
+        var p = document.getElementsByClassName("pointer");
+        p[0].style.display = "none";}
+    })
 </script>	
 
 </body>

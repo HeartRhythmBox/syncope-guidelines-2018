@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Quicksand|Bree+Serif" rel="stylesheet">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"> 
 <link rel="stylesheet" type="text/css" href="cssSyncope.css">
@@ -10,7 +10,7 @@
 <style>
 
 
-
+.bree {font-family: 'Bree Serif', serif;}
 .barContainer {margin-top: 12vh;width: 70%;padding-left: 20%;}
 .bar {height: 20vmax;background-color: black;margin: 0.5vmax;}
 .barText {-ms-transform: rotate(-90deg); /* IE 9 */
@@ -45,7 +45,6 @@ transform-origin: bottom right}
     -webkit-transform-origin: bottom right;
     transform: rotate(60deg);
     transform-origin: bottom right}
-
 
 
 </style>
@@ -209,7 +208,27 @@ transform-origin: bottom right}
     <div class="w3-btn next" onmouseover="next(3)"></div>
 </div>  
 
+<!--blk4 syncope-->
+<div class="block quickSand">
+    <div class="w3-container lightGrey" style="font-size: 3vmax;padding: 1vmax;font-weight: bold">
+        Pathophysiological Basis of Syncope
+    </div>
+    <div class="w3-row w3-padding w3-center bree lGTxt" style="margin: 2vmax 0 2vmax 0;
+    font-size: 1.5vmax;font-weight: lighter;">
+        <span class="w3-cell w3-padding" style="border-top: #dd4477 0.5vmax solid;border-right: transparent 0.8vmax solid">
+            Cardiac Syncope</span>
+        <span class="w3-cell w3-padding" style="border-top: #3366cc 0.5vmax solid;border-right: transparent 0.8vmax solid">
+            Reflex Syncope</span>
+        <span class="w3-cell w3-padding" style="border-top: #109618 0.5vmax solid;border-right: transparent 0.8vmax solid">
+            Orthostatic Hypotension</span>
+    </div>
+    <div class="w3-container" style="margin-top: 2vmax;width: 100%;">    
+    <div id="wordtree_explicit" style="overflow: auto;"></div>
+    </div>
 
+    <div class="w3-btn next" onmouseover="next(3)"></div>
+
+</div>
 
 
 <!--end pointer div-->
@@ -217,6 +236,7 @@ transform-origin: bottom right}
 
 
 <script src="JF_next_pointer.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script>
 window.addEventListener("keydown", function(event) {
         event.preventDefault();
@@ -233,6 +253,47 @@ window.addEventListener("keydown", function(event) {
 
 window.ontouchmove = function () {unblur()};
 window.onscroll = function() {scroll()};
+
+
+google.charts.load('current', {packages:['wordtree']});
+google.charts.setOnLoadCallback(drawSimpleNodeChart);
+function drawSimpleNodeChart() {
+var nodeListData = new google.visualization.arrayToDataTable([
+    ['id', 'childLabel', 'parent', 'size', { role: 'style' }],
+    [0, 'Low Brain Bloodflow', -1, 1, 'black'],
+    
+    [1, 'Low CO', 0, 1, '#797979'],
+    [2, 'Low Periph Resist', 0, 1, '#797979'],
+
+    [3, 'Inapp Reflex', 2, 1, '#3366cc'],
+    [4, 'ANS Failure', 2, 1, '#109618'],
+    [5, 'Mixed', 3, 1, '#3366cc'],
+    [6, 'Vasodepressor', 3, 1, '#3366cc'],
+
+    [7, 'Structural Heart', 1, 1, '#dd4477'],
+    [8, 'Arrhythmias', 1, 1, '#dd4477'],
+
+    [9, 'Low venous return', 1, 1, '#109618'],
+    [10, 'Inapp Reflex', 1, 1, '#3366cc'],
+    [11, 'Cardioinhibitory', 10, 1, '#3366cc'],
+    [12, 'Mixed', 10, 1, '#3366cc'],
+
+    [13, 'Drugs induced', 4, 1, '#109618'],
+    [14, 'Structural damage', 4, 1, '#109618'],
+    
+    
+    ]);
+
+var options = {
+    wordtree: {
+    format: 'explicit',
+    type: 'suffix'
+    },
+    fontName: 'Bree Serif'};
+
+var wordtree = new google.visualization.WordTree(document.getElementById('wordtree_explicit'));
+wordtree.draw(nodeListData, options);
+}
 
 </script>	
 

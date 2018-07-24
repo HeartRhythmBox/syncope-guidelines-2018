@@ -95,9 +95,10 @@ img {width: 100%}
 
 .bottomBar {
     width: 100%; background: #f1f3f4;padding: 2vmax;
-    font-family: 'Quicksand', sans-serif;font-size: 2.25vmax;
+    font-family: 'Quicksand', sans-serif;font-size: 2.5vmax;
     text-decoration: none;    
 }
+
 
 .only600 {display: none}
 .only768 {display: none}

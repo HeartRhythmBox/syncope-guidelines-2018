@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="https://fonts.googleapis.com/css?family=Quicksand|Bree+Serif|Stylish" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Quicksand|Stylish" rel="stylesheet">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"> 
 <link rel="stylesheet" type="text/css" href="cssSyncope.css">
@@ -10,8 +10,21 @@
 <style>
 
 
-.bree {font-family: 'Bree Serif', serif;}
-.stylish {font-family: 'Stylish', sans-serif};
+.stylish {font-family: 'Stylish', sans-serif}
+.wordCloud {font-size: 2vmax;text-align: justify;padding: 2vmax 5vmax 2vmax 5vmax;}
+.wordCloud>::after {content: " • ";color: grey}
+.wordCloud>:first-child, .wordCloud>:nth-child(7), .wordCloud>:nth-child(13), .wordCloud>:nth-child(19) 
+    {color: #8aa6cb}
+.wordCloud>:nth-child(2), .wordCloud>:nth-child(8), .wordCloud>:nth-child(14), .wordCloud>:nth-child(20) 
+    {color: #3D4856}
+.wordCloud>:nth-child(3), .wordCloud>:nth-child(9), .wordCloud>:nth-child(15), .wordCloud>:nth-child(21) 
+    {color: #A1ACBD}
+.wordCloud>:nth-child(4), .wordCloud>:nth-child(10), .wordCloud>:nth-child(16), .wordCloud>:nth-child(22) 
+    {color: #CA96A6}
+.wordCloud>:nth-child(5), .wordCloud>:nth-child(11), .wordCloud>:nth-child(17), .wordCloud>:nth-child(23) 
+    {color: #8d6e9f}
+.wordCloud>:last-child::after {content: ""}
+
 
 </style>
 
@@ -26,8 +39,8 @@
     class="quickSand lGTxt" style="text-decoration: none; font-size: 1vmax">
         2018 ESC Guidelines<span class="no600"> for the diagnosis and management of syncope</span></a>
               
-    <div class="stylish w3-center w3-wide" style="font-size: 50vh;line-height: 32vh;margin-top: 10vh">
-        H </div>
+    <div class="stylish w3-center w3-wide" style="font-size: 50vh;line-height: 32vh;margin-top: 10vh;">
+        <a href="#hx" style="text-decoration: none">H </a>    </div>
     <div class="w3-bar w3-center stylish w3-wide lGTxt" style="font-size: 3vh;">history taking</div>
     
     
@@ -66,8 +79,37 @@
 <!--pointer-->
 <div onclick="pointer()"><span class="pointer" style="display: none"></span> 
 
-<!--blk1 tloc def-->
-<div id="tloc" class="block quickSand">    
+<!--blk1 triggers-->
+<div id="hx" class="block">    
+    <div class="w3-container w3-center quickSand" style="font-size: 5vmax">
+        TRIGGERs
+    </div>
+    <div class="w3-container stylish wordCloud" style="color: #39d6dd">
+            <span>Supine position</span>
+            <span>Normal sleep</span>
+            <span>Sitting</span>
+            <span>Standing for some period</span>
+            <span>Couple of steps after standing up or straightening from bending or squatting position</span> 
+            <span>Micturition, defaecation</span>
+            <span>Coughing</span> 
+            <span>Swallowing</span> 
+            <span>Laughing out loud, telling jokes, unexpectedly meeting an acquaintance</span> 
+            <span>Laughter</span> 
+            <span>During and after eating</span> 
+            <span>Head movements, pressure on the neck, shaving</span> 
+            <span>Fear, pain, instrumentation</span> 
+            <span>During physical exercise</span> 
+            <span>After cessation of physical exercise</span> 
+            <span>During arm exercise</span> 
+            <span>Palpitations</span> 
+            <span>Strong emotions</span>
+            <span>Startling</span>
+            <span>During fever</span> 
+            <span>Flashing lights</span> 
+            <span>Sleep deprivation</span> 
+            <span>Heat/warmth/hot bath</span> 
+     
+    </div>
 
     
     <div class="w3-btn next" onmouseover="next(1)"></div>
@@ -83,7 +125,7 @@
     <a href="https://www.facebook.com/HeartRhythmBox/" title="@HeartRhythmBox" style="color:  #3B5998;">
         <i title="@HeartRhythmBox" class="fab fa-facebook"></i></a>
     <a href="https://heartrhythmbox.github.io/main/" title="main collection">
-    <img src="box transparent.png" style="width: 3%;">
+    <img src="box transparent.png">
     </a>
 </div>
 

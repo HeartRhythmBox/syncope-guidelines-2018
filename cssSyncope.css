@@ -115,6 +115,11 @@ img {width: 100%}
     .only768 {display: block}
 }
 
+.ref {
+    font-size: 1.1vmax;margin-top: 2vmax;
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;color: #797979;
+}
 
 
 /*text*/

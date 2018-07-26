@@ -25,6 +25,18 @@
     {color: #8d6e9f}
 .wordCloud>:last-child::after {content: ""}
 
+.stampRow {background: #f1f1f1;box-shadow: 0 0 1vh rgba(0, 0, 0, 0.6)}
+.stampBorder{
+  height: 12vh;
+  padding: 0.9vh; margin: 0;
+  background:radial-gradient(transparent 0px, transparent 0.6vh, #f7bb85 0.6vh, #f7bb85);
+  background-size:1.8vh 1.8vh;
+  background-position:0.9vh 0.9vh;
+  }
+.stampBG {background-color: #f7bb85;width: 100%;height: 100%;text-align: center;}
+.stamp {font-family: 'Stylish', sans-serif;font-size: 2vmax;line-height: 100%;text-align: center;}
+
+
 
 </style>
 
@@ -81,14 +93,34 @@
 
 <!--blk1 triggers-->
 <div id="hx" class="block">    
-    
-    <div class="stylish wordCloud" style="color: #0e757a">
-            <svg height="20vmax" width="20vmax" class="quickSand" style="font-size: 5vmax;">
-                    <circle cx="10vmax" cy="10vmax" r="9vmax" stroke="grey" stroke-width="3" fill="none" />
-                    <text x="4vmax" y="10vmax">Trig</text>
-                    <text x="6vmax" y="14vmax">gers</text>
-                  </svg>                            
-            <span style="margin-left: -5vmax;">Supine POSITION</span>
+    <svg height="20vmax" width="20vmax" class="quickSand" style="font-size: 5vmax;">
+        <circle cx="10vmax" cy="10vmax" r="9vmax" stroke="grey" stroke-width="3" fill="none" />
+        <text x="4vmax" y="10vmax">Trig</text>
+        <text x="6vmax" y="14vmax">gers</text>
+      </svg>    
+    <div class="stampRow w3-row">
+        <div class="stampBorder w3-col s3">
+        <div class="stampBG"> 
+            <span class="stamp">Supine position</span>
+        </div>
+        </div>
+        <div class="stampBorder w3-col s3">
+            <div class="stampBG"> 
+                <span class="stamp">Sitting</span>
+            </div>
+            </div>
+        <div class="stampBorder w3-col s3">
+            <div class="stampBG"> 
+                <span class="stamp">Standing for some period</span>
+            </div>
+            </div>
+        <div class="stampBorder w3-col s3">
+            <div class="stampBG"> 
+                <span class="stamp">Straightening from bending or squatting</span>
+            </div>
+            </div>
+    </div>
+            
             <span>Normal sleep</span>
             <span>Sitting</span>
             <span>Standing for some period</span>
@@ -112,7 +144,7 @@
             <span>Sleep deprivation</span> 
             <span>Heat/warmth/hot bath</span> 
      
-    </div>
+    
 
     
     <div class="w3-btn next" onmouseover="next(1)"></div>

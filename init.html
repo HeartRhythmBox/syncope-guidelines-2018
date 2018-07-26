@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="https://fonts.googleapis.com/css?family=Quicksand|Stylish" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Quicksand|Special+Elite" rel="stylesheet">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"> 
 <link rel="stylesheet" type="text/css" href="cssSyncope.css">
@@ -10,33 +10,37 @@
 <style>
 
 
-.stylish {font-family: 'Stylish', sans-serif}
-.wordCloud {font-size: 2vmax;text-align: justify;padding: 2vmax 5vmax 2vmax 5vmax;}
-.wordCloud>::after {content: " • ";color: grey}
-.wordCloud>:first-child, .wordCloud>:nth-child(7), .wordCloud>:nth-child(13), .wordCloud>:nth-child(19) 
-    {color: #8aa6cb}
-.wordCloud>:nth-child(2), .wordCloud>:nth-child(8), .wordCloud>:nth-child(14), .wordCloud>:nth-child(20) 
-    {color: #3D4856}
-.wordCloud>:nth-child(3), .wordCloud>:nth-child(9), .wordCloud>:nth-child(15), .wordCloud>:nth-child(21) 
-    {color: #A1ACBD}
-.wordCloud>:nth-child(4), .wordCloud>:nth-child(10), .wordCloud>:nth-child(16), .wordCloud>:nth-child(22) 
-    {color: #CA96A6}
-.wordCloud>:nth-child(5), .wordCloud>:nth-child(11), .wordCloud>:nth-child(17), .wordCloud>:nth-child(23) 
-    {color: #8d6e9f}
-.wordCloud>:last-child::after {content: ""}
+.cursive {font-family: 'Special Elite', cursive;}
 
-.stampRow {background: #f1f1f1;box-shadow: 0 0 1vh rgba(0, 0, 0, 0.6)}
+.stampCircle {
+    height: 16vmax;width: 16vmax;
+    background-color: #bc0012;color: white;
+    border-radius: 50%;border: #d86163 0.5vmax double;
+    margin: 2vmax 0 -0.2vmax 5vmax;
+    display: inline-block;
+    font-size: 4vmax;line-height: 90%;
+    padding: 3.5vmax 0 0 1.8vmax;
+    transform: rotate(-18deg);
+    box-shadow: 0.2vmax 0.2vmax 1vmax rgba(0, 0, 0,0.6);
+}
+
+.stampCol {padding: 0.2vh 0.4vw}
 .stampBorder{
-  height: 12vh;
-  padding: 0.9vh; margin: 0;
-  background:radial-gradient(transparent 0px, transparent 0.6vh, #f7bb85 0.6vh, #f7bb85);
-  background-size:1.8vh 1.8vh;
-  background-position:0.9vh 0.9vh;
+  height: 7vmax;
+  padding:0.5vmax; 
+  background:radial-gradient(transparent 0px, transparent 0.4vmax, #F2E9C8 0.4vmax, #F2E9C8);
+  background-size:1.2vmax 1.2vmax;
+  background-position:0.6vmax 0.6vmax;box-shadow: 0 0 1vmax rgba(242, 223, 200,0.6);
   }
-.stampBG {background-color: #f7bb85;width: 100%;height: 100%;text-align: center;}
-.stamp {font-family: 'Stylish', sans-serif;font-size: 2vmax;line-height: 100%;text-align: center;}
+.stampBG {background-color: #F2E9C8;width: 100%;height: 100%;text-align: center;padding: 0.5vmax;
+        display: table}
+.stamp {font-family: 'Quicksand', sans-serif;font-size: 2vmax;height: 100%;font-weight: bold;
+line-height: 80%;border:#b55443 0.2vmax dotted;display: 
+table-cell;vertical-align: middle;text-align: center}
 
-
+@media only screen and (max-width: 600px) {
+    .stamp {font-size: 1.8vmax;font-weight: 400}
+}
 
 </style>
 
@@ -51,9 +55,9 @@
     class="quickSand lGTxt" style="text-decoration: none; font-size: 1vmax">
         2018 ESC Guidelines<span class="no600"> for the diagnosis and management of syncope</span></a>
                  
-    <div class="stylish w3-center w3-wide" style="font-size: 50vh;line-height: 32vh;margin-top: 10vh;">
+    <div class="cursive w3-center w3-wide" style="font-size: 50vh;line-height: 24vh;margin-top: 18vh;">
         <a href="#hx" style="text-decoration: none">H </a>    </div>
-    <div class="w3-bar w3-center stylish w3-wide lGTxt" style="font-size: 3vh;">history taking</div>
+    <div class="w3-bar w3-center cursive w3-wide lGTxt" style="font-size: 3vh;">history taking</div>
     
     
 </div>
@@ -93,72 +97,207 @@
 
 <!--blk1 triggers-->
 <div id="hx" class="block">    
-    <svg height="20vmax" width="20vmax" class="quickSand" style="font-size: 5vmax;">
-        <circle cx="10vmax" cy="10vmax" r="9vmax" stroke="grey" stroke-width="3" fill="none" />
-        <text x="4vmax" y="10vmax">Trig</text>
-        <text x="6vmax" y="14vmax">gers</text>
-      </svg>    
-    <div class="stampRow w3-row">
-        <div class="stampBorder w3-col s3">
-        <div class="stampBG"> 
-            <span class="stamp">Supine position</span>
-        </div>
-        </div>
-        <div class="stampBorder w3-col s3">
-            <div class="stampBG"> 
-                <span class="stamp">Sitting</span>
-            </div>
-            </div>
-        <div class="stampBorder w3-col s3">
-            <div class="stampBG"> 
-                <span class="stamp">Standing for some period</span>
-            </div>
-            </div>
-        <div class="stampBorder w3-col s3">
-            <div class="stampBG"> 
-                <span class="stamp">Straightening from bending or squatting</span>
-            </div>
-            </div>
+    <div class="stampCircle cursive">
+        TRIG<br> &nbsp; GERS
     </div>
-            
-            <span>Normal sleep</span>
-            <span>Sitting</span>
-            <span>Standing for some period</span>
-            <span>Couple of steps after standing up or straightening from bending or squatting POSITION</span> 
-            <span>Micturition, defaecation</span>
-            <span>Coughing</span> 
-            <span>Swallowing</span> 
-            <span>Laughing out loud, telling jokes, unexpectedly meeting an acquaintance</span> 
-            <span>Laughter</span> 
-            <span>During and after eating</span> 
-            <span>Head movements, pressure on the neck, shaving</span> 
-            <span>Fear, pain, instrumentation</span> 
-            <span>During physical exercise</span> 
-            <span>After cessation of physical exercise</span> 
-            <span>During arm exercise</span> 
-            <span>Palpitations</span> 
-            <span>Strong emotions</span>
-            <span>Startling</span>
-            <span>During fever</span> 
-            <span>Flashing lights</span> 
-            <span>Sleep deprivation</span> 
-            <span>Heat/warmth/hot bath</span> 
-     
     
+    <div class="w3-row">
+        <div class="w3-col s3 stampCol">
+        <div class="stampBorder"><div class="stampBG"> 
+            <div class="stamp">Supine position</div>
+        </div></div></div>
+        <div class="w3-col s3 stampCol">
+        <div class="stampBorder"><div class="stampBG">
+            <div class="stamp">Sitting</div>
+        </div></div></div>
+        <div class="w3-col s3 stampCol">
+            <div class="stampBorder"><div class="stampBG">
+                <div class="stamp">Standing for some period</div>
+            </div></div></div>
+        <div class="w3-col s3 stampCol">
+            <div class="stampBorder"><div class="stampBG">
+                <div class="stamp">During normal sleep</div>
+            </div></div></div>
+      
+    </div>
 
-    
+    <div class="w3-row">
+        <div class="w3-col s3 stampCol">
+        <div class="stampBorder"><div class="stampBG"> 
+            <div class="stamp">Micturation</div>
+        </div></div></div>
+        <div class="w3-col s3 stampCol">
+        <div class="stampBorder"><div class="stampBG">
+            <div class="stamp">Defecation</div>
+        </div></div></div>
+        <div class="w3-col s3 stampCol">
+            <div class="stampBorder"><div class="stampBG">
+                <div class="stamp">Swallowing</div>
+            </div></div></div>
+        <div class="w3-col s3 stampCol">
+            <div class="stampBorder"><div class="stampBG">
+                <div class="stamp">Coughing</div>
+            </div></div></div>
+    </div>
+          
+    <div class="w3-row">
+        <div class="w3-col s3 stampCol">
+        <div class="stampBorder"><div class="stampBG"> 
+            <div class="stamp">Lauging out loud</div>
+        </div></div></div>
+        <div class="w3-col s3 stampCol">
+        <div class="stampBorder"><div class="stampBG">
+            <div class="stamp">During and after eating</div>
+        </div></div></div>
+        <div class="w3-col s3 stampCol">
+            <div class="stampBorder"><div class="stampBG">
+                <div class="stamp">Head movement</div>
+            </div></div></div>
+        <div class="w3-col s3 stampCol">
+            <div class="stampBorder"><div class="stampBG">
+                <div class="stamp">Shaving</div>
+            </div></div></div>
+    </div>
+
+    <div class="w3-row">
+        <div class="w3-col s3 stampCol">
+        <div class="stampBorder"><div class="stampBG"> 
+            <div class="stamp">During exercise</div>
+        </div></div></div>
+        <div class="w3-col s3 stampCol">
+        <div class="stampBorder"><div class="stampBG">
+            <div class="stamp">After exercise</div>
+        </div></div></div>
+        <div class="w3-col s3 stampCol">
+            <div class="stampBorder"><div class="stampBG">
+                <div class="stamp">Arm exercise</div>
+            </div></div></div>
+        <div class="w3-col s3 stampCol">
+            <div class="stampBorder"><div class="stampBG">
+                <div class="stamp">Startling</div>
+            </div></div></div>
+    </div>
+
+    <div class="w3-row">
+        <div class="w3-col s3 stampCol">
+        <div class="stampBorder"><div class="stampBG"> 
+            <div class="stamp">Palpitations</div>
+        </div></div></div>
+        <div class="w3-col s3 stampCol">
+        <div class="stampBorder"><div class="stampBG">
+            <div class="stamp">During fever</div>
+        </div></div></div>
+        <div class="w3-col s3 stampCol">
+            <div class="stampBorder"><div class="stampBG">
+                <div class="stamp">Flashing lights</div>
+            </div></div></div>
+        <div class="w3-col s3 stampCol">
+            <div class="stampBorder"><div class="stampBG">
+                <div class="stamp">Sleep deprivation</div>
+            </div></div></div>
+        </div>
+
+    <div class="w3-row">
+        <div class="w3-col s4 stampCol">
+        <div class="stampBorder"><div class="stampBG"> 
+            <div class="stamp">Straightening from squatting</div>
+        </div></div></div>
+        <div class="w3-col s4 stampCol">
+        <div class="stampBorder"><div class="stampBG">
+            <div class="stamp">Fear, pain, instrumentation</div>
+        </div></div></div>
+        
+        <div class="w3-col s4 stampCol">
+            <div class="stampBorder"><div class="stampBG">
+                <div class="stamp">Heat, warmth, hot bath</div>
+            </div></div></div>
+    </div>
+        
     <div class="w3-btn next" onmouseover="next(1)"></div>
 </div>
 
 <!--blk2 during-->
-<div class="block"> 
-    <div class="w3-container w3-center quickSand" style="font-size: 5vmax">
-        DURING the ATTACK
+<div class="block w3-center"> 
+    <div class="cursive container w3-center" 
+    style="width: max-content;height: max-content;background-color: #415692;font-size: 4vmax;
+        color: white;border: white 1vmax double;padding: 0 0.5vmax;
+        border-radius: 0.8vmax;margin: auto">
+        DURING THE ATTACK</div>
+
+    <div class="w3-row">
+            <div class="w3-col s3 stampCol">
+            <div class="stampBorder"><div class="stampBG"> 
+                <div class="stamp" style="border:#415692 0.2vmax dotted;">Change in vision</div>
+            </div></div></div>
+            <div class="w3-col s3 stampCol">
+            <div class="stampBorder"><div class="stampBG">
+                <div class="stamp" style="border:#415692 0.2vmax dotted;">Nausea, sweating</div>
+            </div></div></div>
+            <div class="w3-col s3 stampCol">
+                <div class="stampBorder"><div class="stampBG">
+                    <div class="stamp" style="border:#415692 0.2vmax dotted;">Neck and shoulder pain</div>
+                </div></div></div>
+            <div class="w3-col s3 stampCol">
+                <div class="stampBorder"><div class="stampBG">
+                    <div class="stamp" style="border:#415692 0.2vmax dotted;">Shout</div>
+                </div></div></div>
+            
         </div>
-    <div class="w3-container stylish wordCloud" style="color: #989fe1">
-        during
+
+    <div class="w3-row">
+        <div class="w3-col s3 stampCol">
+        <div class="stampBorder"><div class="stampBG"> 
+            <div class="stamp" style="border:#415692 0.2vmax dotted;">Oral automatisms</div>
+        </div></div></div>
+        <div class="w3-col s3 stampCol">
+        <div class="stampBorder"><div class="stampBG">
+            <div class="stamp" style="border:#415692 0.2vmax dotted;">Cyanosis</div>
+        </div></div></div>
+        <div class="w3-col s3 stampCol">
+            <div class="stampBorder"><div class="stampBG">
+                <div class="stamp" style="border:#415692 0.2vmax dotted;">Eyes movement</div>
+            </div></div></div>
+        <div class="w3-col s3 stampCol">
+            <div class="stampBorder"><div class="stampBG">
+                <div class="stamp" style="border:#415692 0.2vmax dotted;">Tongue bitten</div>
+            </div></div></div>
     </div>
     
+    <div class="w3-row">
+        <div class="w3-col s3 stampCol">
+        <div class="stampBorder"><div class="stampBG"> 
+            <div class="stamp" style="border:#415692 0.2vmax dotted;">Incontinence</div>
+        </div></div></div>
+        <div class="w3-col s3 stampCol">
+        <div class="stampBorder"><div class="stampBG">
+            <div class="stamp" style="border:#415692 0.2vmax dotted;">Ataxia</div>
+        </div></div></div>
+        <div class="w3-col s3 stampCol">
+            <div class="stampBorder"><div class="stampBG">
+                <div class="stamp" style="border:#415692 0.2vmax dotted;">Pelvic thrusting</div>
+            </div></div></div>
+        <div class="w3-col s3 stampCol">
+            <div class="stampBorder"><div class="stampBG">
+                <div class="stamp" style="border:#415692 0.2vmax dotted;">Duration of TLOC</div>
+            </div></div></div>
+    </div>
+    
+    <div class="w3-row">
+        <div class="w3-col s4 stampCol">
+        <div class="stampBorder"><div class="stampBG"> 
+            <div class="stamp" style="border:#415692 0.2vmax dotted;">Onset of abn. movement</div>
+        </div></div></div>
+        <div class="w3-col s4 stampCol">
+        <div class="stampBorder"><div class="stampBG">
+            <div class="stamp" style="border:#415692 0.2vmax dotted;">Sync vs. async movement</div>
+        </div></div></div>
+        <div class="w3-col s4 stampCol">
+            <div class="stampBorder"><div class="stampBG">
+                <div class="stamp" style="border:#415692 0.2vmax dotted;">Numbers of movement</div>
+            </div></div></div>
+        
+        </div>
+
     <div class="w3-btn next" onmouseover="next(1)"></div>
 </div>
 

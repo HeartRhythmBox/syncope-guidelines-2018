@@ -12,6 +12,7 @@
 
 .bree {font-family: 'Bree Serif', serif;}
 .barContainer {margin-top: 12vh;width: 70%;padding-left: 20%;}
+
 .bar {height: 20vmax;background-color: black;margin: 0.5vmax;}
 .barText {-ms-transform: rotate(-90deg); /* IE 9 */
     -ms-transform-origin: center;
@@ -60,7 +61,7 @@ transform-origin: bottom right}
     class="quickSand lGTxt" style="text-decoration: none; font-size: 1vmax">
         2018 ESC Guidelines<span class="no600"> for the diagnosis and management of syncope</span></a>
               
-    <div class="barContainer">
+    <div class="barContainer" onmouseover="barColor()" onmouseout="barBlack()">
         <a href="#tloc" style="text-decoration: none">
         <div class="w3-col s1 bar">
             <div class="barText quickSand">&nbsp;TRANSIENT</div>
@@ -268,6 +269,30 @@ window.addEventListener("keydown", function(event) {
 window.ontouchmove = function () {unblur()};
 window.onscroll = function() {scroll()};
 
+function barColor() {
+    var bar = document.getElementsByClassName('bar');
+    var text = document.getElementsByClassName('barText');var i;
+    bar[0].style.backgroundColor = '#c2c2c4';
+    text[0].style.color = "black";text[1].style.color = "black";
+    text[2].style.color = "white";text[3].style.color = "white";
+    bar[1].style.backgroundColor = '#c0cfe3';
+    bar[2].style.backgroundColor = '#b2843d';
+    bar[3].style.backgroundColor = '#7c4c1b';
+    for (i=0;i<text.length;i++){
+        text[i].style.fontWeight = 'bold';
+    }
+}
+
+function barBlack(){
+    var bar = document.getElementsByClassName('bar');
+    var text = document.getElementsByClassName('barText');
+    var i;
+    for (i=0;i<bar.length;i++) {
+        bar[i].style.backgroundColor = 'black';
+        text[i].style.color = '#c0cfe3';
+        text[i].style.fontWeight = '400';
+    }
+}
 
 google.charts.load('current', {packages:['wordtree']});
 google.charts.setOnLoadCallback(drawSimpleNodeChart);

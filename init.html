@@ -61,6 +61,20 @@ table-cell;vertical-align: middle;text-align: center}
 .redflagTable td:first-child, .redflagTable td:nth-child(2){border-top: #797979 solid 0.1vmax}
 .redflagTable i {font-size: 8vmax}
 
+.barBlkL {width: 84vw;margin-left: 1vw;border: black 0.5vmax solid;border-left: none;}
+.barBlkR {margin-left: 14vw;margin-right: 2vw;margin-top: 1vh;
+    border: black 0.5vmax solid;border-right: none;}
+.echo {font-size: 4vmax;font-weight: 900}
+.echoTxt {font-size: 2.5vmax;padding:8.8% 1vmax;line-height: 95%}
+@media only screen and (max-width: 1200px){
+    .barBlkL{width: 100%;margin: 0;border-right: none}
+    .barBlkR{width: 100%;margin: 1vh 0 0 0;border-left: none;}
+}
+@media only screen and (max-width: 600px){
+    .echo {font-size: 2.5vmax;font-weight: 400}
+    .echoTxt {padding: 0.8vmax;font-size: 2vmax;line-height: 110%}
+}
+
 
 </style>
 
@@ -484,24 +498,37 @@ table-cell;vertical-align: middle;text-align: center}
     <div class="w3-btn next" onmouseover="next(5)"></div>
 </div>
 
-<!--blk6 echo-->
+<!--blk6 echo tele-->
 <div class="block" >
-    <div class="w3-row" style="width: 85%;">
+    <div class="w3-row barBlkL">
     <div class="w3-col s7 w3-center w3-display-container" style="padding: 1vmax 0 1vmax 1vmax">
         <img src="media/init/echo.png" style="opacity: 0.7" class="w3-sepia">
-        <div class="w3-display-middle bree" 
-        style="mix-blend-mode: screen;background-color:rgba(231,204,86,1);font-size: 5vmax;
-        font-weight: 900;padding: 0 0.5vmax;">
+        <div class="w3-display-middle bree echo" 
+        style="mix-blend-mode: screen;background-color:rgba(231,204,86,1);padding: 0 0.5vmax;
+        text-shadow: rgba(0, 0, 0,0.4) 0 0 0.4vmax">
             ECHOCARDIOGRAM
         </div>
     </div>
-    <div class="w3-col s5 quickSand" style="font-size: 2.5vmax;padding:8.8% 1vmax;
-    border-top: black 0.5vmax solid;border-right: black 0.5vmax solid;
-    border-bottom: black 0.5vmax solid;line-height: 100%">
-    known heart disease, <br><br>
-    or suggestive of structural heart disease, <br><br>
+    <div class="w3-col s5 quickSand echoTxt">
+    known heart disease, <span class="no600"><br></span><br>
+    or suggestive of structural heart disease, <br><span class="no600"><br></span>
     or cardiac syncope.
     </div>
+    </div>
+
+    <div class="w3-row barBlkR">
+    <div class="w3-col s5 quickSand" style="font-size: 3vmax;padding: 1vmax">
+        <span class="no600"><br></span>
+        suspicion of arrhythmic syncope.
+    </div>
+    <div class="w3-col s7 w3-center w3-display-container" style="padding: 1vmax 0 1vmax 1vmax">
+        <img src="media/init/tele.png" style="opacity: 0.5" class="w3-sepia">
+        <div class="w3-display-middle bree"
+        style="mix-blend-mode: screen;background-color:#ff8000;
+        font-size: 4vmax;font-weight: 900; text-shadow: rgba(0, 0, 0,0.4) 0 0 0.4vmax">
+        ECG Monitoring
+        </div>        
+    </div>    
     </div>
 
     <div class="w3-btn next" onmouseover="next(6)"></div>

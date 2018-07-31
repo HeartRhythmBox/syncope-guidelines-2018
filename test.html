@@ -22,19 +22,31 @@
                 transition: visibility 0.5s ease}
 .mainTable:hover .bigList {opacity: 1;border-left: 1vmax black solid;font-size: 2vmax;
     -webkit-transition:opacity 1s ease-in;             
-    transition: opacity 1s ease-in;transition-delay: 0.5s}
+    transition: opacity 1s ease-in;transition-delay: 0.4s}
                 
 @keyframes slideRight {
     0% {transform: translateX(0%)}
-    70% {transform: translateX(80%);}
+    90% {transform: translateX(100%);color: #ababab}
     100% {color: transparent;text-align: left}
 }
 
 @-webkit-keyframes slideRight {
     0% {transform: translateX(0%)}
-    70% {transform: translateX(80%)}
-    100% {color: transparent}
+    90% {transform: translateX(100%);color: #ababab}
+    100% {color: transparent;text-align: left}
 } 
+
+.brown1Txt {color: #b2843d}
+.brown2Txt {color: #7c4c1b}
+
+.conceptList {font-size: 1.8vmax;visibility: hidden;border-collapse: collapse;}
+.conceptList li {padding: 1vmax}
+.conceptList li :hover {background-color:lightgrey }
+.record {font-size: 2.5vmax;font-weight: 700;color: #b2843d}
+.provoke {font-size: 2.5vmax;font-weight: 700;color: #7c4c1b}
+.classI {border-left: green 0.5vmax solid;padding:0.1vmax 0.5vmax;}
+.classII {border-left: yellow 0.5vmax solid;padding:0.1vmax 0.5vmax;}
+
 
 
 </style>
@@ -67,7 +79,7 @@
         </tr>
         <tr>
             <td class="mainList incList">carotid sinus massage</td>
-            <td class="bigList">Carotid Sinus Massage</td>
+            <td class="bigList" style="border-color: #ababab">Carotid Sinus Massage</td>
         </tr>
         <tr>
             <td class="mainList">coronary angiogram</td>
@@ -75,10 +87,10 @@
         </tr>
         <tr>
             <td class="mainList incList">ep study</td>
-            <td class="bigList">EP Study</td>
+            <td class="bigList" style="border-color: #c0cfe3">EP Study</td>
         </tr>
         <tr>
-            <td class="mainList">holter/event monitoring</td>
+            <td class="mainList">holter monitoring</td>
             <td></td>
         </tr>
         <tr>
@@ -87,11 +99,11 @@
         </tr>
         <tr>
             <td class="mainList incList">loop recorder</td>
-            <td class="bigList">Loop Recorder</td>
+            <td class="bigList" style="border-color: #b2843d">Loop Recorder</td>
         </tr>
         <tr>
             <td class="mainList incList">tilt testing</td>
-            <td class="bigList">Tilt Testing</td>
+            <td class="bigList" style="border-color: #7c4c1b">Tilt Testing</td>
         </tr>
         <tr>
             <td class="mainList">video recording</td>
@@ -138,28 +150,82 @@
 <!--pointer-->
 <div onclick="pointer()"><span class="pointer" style="display: none"></span> 
 
-<!--blk1 triggers-->
-<div id="test" class="block">    
-    <div class="w3-container quickSand" style="background-color: #ebf1fc">
-        <div class="w3-row w3-wide w3-center" style="margin-top: 10vh;font-size: 5vmax;line-height: 100%">
+<!--blk1 concept-->
+<div id="test" class="block w3-container quickSand" style="background-color: #ebf1fc">    
+    
+    <div class="w3-row w3-wide w3-center" style="margin-top: 10vh;font-size: 5vmax;line-height: 100%">
             CONCEPT </div>
-        <div class="w3-row quickSand w3-center lGTxt" style="font-size: 2vmax;">
-            &nbsp;&nbsp;<em>to</em> record &bull; <em>to</em> provoke
+    <div class="w3-row quickSand w3-center lGTxt" style="font-size: 2vmax;cursor: pointer;"
+        onclick="document.getElementsByClassName('conceptList')[0].style.visibility = 'visible';
+        document.getElementsByClassName('conceptList')[1].style.visibility = 'visible'">
+            <em>to</em> <span class="brown1Txt" style="font-weight: 900">record</span> &bull; <em>to</em> 
+            <span class="brown2Txt" style="font-weight: 900">provoke</span>
+    </div>
+    <div class="w3-row" style="padding-top:5vh">
+        <div class="w3-col s6 w3-mobile" style="padding: 3vmax;">
+        <ul class="w3-ul conceptList" style="border: #b2843d 0.1vmax solid;border-radius: 2vmax">
+            <li>
+                <div class="record">ABPM 
+                    <span style="font-size: 1.5vmax;color: #797979">(ambulatory BP monitoring)</span>
+                </div>
+                <div class="classI">to detect nocturnal hypertension.</div>
+                <div class="classII">to detect and monitor OH in daily life.</div>
+            </li>
+            <li>
+                <div class="record">Holter Monitor</div>
+                <div class="classII">considered in frequent syncope or presyncope (&ge;1/wk).</div>
+            </li>
+            <li>
+                <div class="record">Loop Recorder</div>
+                <div class="classII">External recorder: for those with once-in-4wks episode.</div>
+                <div class="classI">ILR 
+                    <span style="font-size: 1.5vmax">(implantable loop recorder)</span>
+                    : indicated in recurrent syncope or syncope with high-risk criteria after unrevealing
+                    evaluation.
+                </div>
+            </li>
+            <li>
+                <div class="record">Video Recording</div>
+                <div class="classII">considered home video recordings of spontaneous events.</div>
+            </li>
+
+        </ul>    
         </div>
-        <div class="w3-row quickSand" style="font-size: 2vmax;margin-top: 2vh">
-            <div class="w3-col s6 w3-mobile" style='border-right: #797979 0.1vmax solid;padding: 0.1vmax 0.4vmax;
-            text-align: right'>
-                <div class="w3-bar">
-                    <b>Ambulatory BP</b> 
+
+        <div class="w3-col s6 w3-mobile" style="padding: 3vmax">
+        <ul class="w3-ul conceptList" style="border: #7c4c1b 0.1vmax solid;border-radius: 2vmax">   
+            <li>
+                <div class="provoke">Autonomic Function Test</div>
+                <div class="classII">consider Valsalva maneuver or Deep-breathing test 
+                    if neurogenic OH is suspected.</div>
+            </li>
+            <li>
+                <div class="provoke">Carotid Sinus Massage</div>
+                <div class="classI">indicated in patients>40 years of age
+                    with syncope of unknown origin compatible with a reflex mechanism.
                 </div>
-            </div>
-            <div class="w3-col s6 w3-mobile"  style="padding: 0.1vmax 0.4vmax">
-                <div class="w3-bar">
-                    <b>Autonomic function test</b> 
+            </li>
+            <li>
+                <div class="provoke">EP Study</div>
+                <div class="classI">old MI + unexplained syncope + not yet indicated for ICD.</div>
+                <div class="classII">bifascicular block + unexplained syncope</div>
+            </li>
+            <li>
+                <div class="provoke">Exercise Testing</div>
+                <div class="classI">syncope during or shortly after exertion.</div>
+            </li>
+            <li>
+                <div class="provoke">Tilt Testing</div>
+                <div class="classII">suspected; but not confirmed by initial evaluation, of reflex syncope.</div>
+                <div class="classII">
+                    assessment of delayed OH, POTS vs psychogenic syncope.
                 </div>
-            </div>
+            </li>
+        </ul> 
         </div>
     </div>
+        
+    
     
     <div class="w3-btn next" onmouseover="next(1)"></div>
 </div>

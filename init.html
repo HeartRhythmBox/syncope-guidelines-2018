@@ -61,19 +61,22 @@ table-cell;vertical-align: middle;text-align: center}
 .redflagTable td:first-child, .redflagTable td:nth-child(2){border-top: #797979 solid 0.1vmax}
 .redflagTable i {font-size: 8vmax}
 
-.barBlkL {width: 84vw;margin-left: 1vw;border: black 0.5vmax solid;border-left: none;}
-.barBlkR {margin-left: 14vw;margin-right: 2vw;margin-top: 1vh;
-    border: black 0.5vmax solid;border-right: none;}
-.echo {font-size: 4vmax;font-weight: 900}
-.echoTxt {font-size: 2.5vmax;padding:8.8% 1vmax;line-height: 95%}
+.barBlkL {width: 74vw;margin-left: 1vw;}
+.barBlkR {margin-left: 24vw;margin-right: 1vw;margin-top: 1vh;}
+.echo {font-size: 5vmax;font-weight: 900;text-align: center;line-height: 100%;}
+.echoTxt {font-size: 3vmax;padding:1vmax;line-height: 80%;text-align: justify}
 @media only screen and (max-width: 1200px){
     .barBlkL{width: 100%;margin: 0;border-right: none}
     .barBlkR{width: 100%;margin: 1vh 0 0 0;border-left: none;}
 }
 @media only screen and (max-width: 600px){
-    .echo {font-size: 2.5vmax;font-weight: 400}
-    .echoTxt {padding: 0.8vmax;font-size: 2vmax;line-height: 110%}
+    .echo {font-weight: 600}
+    .echoTxt {padding: 0.8vmax;font-size: 2vmax;line-height: 100%}
 }
+
+.ddxBlk {padding: 2vmax 3vmax;font-size: 1.8vmax}
+.ddxBlk li {padding: 1vmax 0;line-height: 100%}
+.head {font-size: 3vmax;}
 
 
 </style>
@@ -434,8 +437,57 @@ table-cell;vertical-align: middle;text-align: center}
     <div class="w3-btn next" onmouseover="next(4)"></div>
 </div>
 
+<!--blk5 DDx-->
+<div class="block lightGrey"> 
+    <div class="w3-row w3-center quickSand" style="padding-top: 10vh;font-size: 5vmax">
+        Suggestive Clinical Features
+    </div>
+    <div class="w3-row quickSand" style="margin-top: 5vh">
+        <div class="w3-col s12 m6 l4 ddxBlk">
+            <div class="head" style="border-bottom:#c0cfe3 solid 0.5vmax">
+                Reflex Syncope</div>
+            <ul class="w3-ul w3-hoverable">
+                <li>long Hx of recurrent syncope</li>        
+                <li>after unpleasant sight, sound, smell, or pain</li>
+                <li>prolong standing</li>
+                <li>during meal</li>
+                <li>being in crowded or hot places</li>
+                <li>Prodrome: pallor, sweating, nausea, or vomiting</li>
+                <li>with head rotation or pressure on neck</li>
+            </ul>
+        </div>
+        <div class="w3-col s12 m6 l4 ddxBlk">
+            <div class="head" style="border-bottom:#b2843d solid 0.5vmax">
+               OH <span style="font-size: 1.5vmax">(orthostatic hypotension)</span></div>
+            <ul class="w3-ul w3-hoverable">
+                <li>while or after standing</li>
+                <li>prolonged standing</li>
+                <li>standing after exertion</li>
+                <li>after meal</li>
+                <li>changes in antihypertensive or diuretic</li>
+                <li>autonomic neuropathy or parkinsonism</li>
+            </ul>
+        </div>
+        <div class="w3-col s12 m6 l4 ddxBlk">
+            <div class="head" style="border-bottom:#7c4c1b solid 0.5vmax">
+                Cardiac Syncope </div>
+            <ul class="w3-ul w3-hoverable">
+                <li>during exertion or when supine</li>
+                <li>sudden onset palpitation immediately followed by syncope</li>
+                <li>family history of unexplained sudden death at young age</li>
+                <li>presence of structural heart disease or coronary artery disease</li>
+                <li>ECG findings suggesting arrhythmic syncope<br>
+                <span style="font-size: 1.5vmax;color: #797979">(SA/AV block, preexcitation, bifascicular block,
+                    LVH, Brugada pattern, TWI in V1-v4, long or short QTc, VT)</span>
+                </li>
+               
+            </ul>
+            </div>
+    </div>
+    <div class="w3-btn next" onmouseover="next(5)"></div>
+</div>
 
-<!--blk5 red flag-->
+<!--blk6 red flag-->
 <div class="block" >
     <div class="w3-display-container" style="margin: 5vmax 5vmax ">
         <img src="media/init/red flag.png" style="width: 40vmax;">
@@ -495,43 +547,41 @@ table-cell;vertical-align: middle;text-align: center}
     </table>
     
 
-    <div class="w3-btn next" onmouseover="next(5)"></div>
+    <div class="w3-btn next" onmouseover="next(6)"></div>
 </div>
 
-<!--blk6 echo tele-->
+<!--blk7 echo tele-->
 <div class="block" >
     <div class="w3-row barBlkL">
-    <div class="w3-col s7 w3-center w3-display-container" style="padding: 1vmax 0 1vmax 1vmax">
-        <img src="media/init/echo.png" style="opacity: 0.7" class="w3-sepia">
+    <div class="w3-display-container" 
+    style="background-color:#c0cfe3">
+        <img src="media/init/echo.png" style="mix-blend-mode:exclusion">
         <div class="w3-display-middle bree echo" 
-        style="mix-blend-mode: screen;background-color:rgba(231,204,86,1);padding: 0 0.5vmax;
-        text-shadow: rgba(0, 0, 0,0.4) 0 0 0.4vmax">
-            ECHOCARDIOGRAM
+        style="padding: 0 0.5vmax;text-shadow: rgba(0, 0, 0,0.4) 0 0 0.4vmax;
+        background-color: rgba(242, 223, 200,0.6);">
+            ECHOCARDIOGRAM<br><span class="quickSand echoTxt">known heart disease,
+        or suggestive of structural heart disease,
+        or cardiac syncope. </span>
         </div>
-    </div>
-    <div class="w3-col s5 quickSand echoTxt">
-    known heart disease, <span class="no600"><br></span><br>
-    or suggestive of structural heart disease, <br><span class="no600"><br></span>
-    or cardiac syncope.
     </div>
     </div>
 
     <div class="w3-row barBlkR">
-    <div class="w3-col s5 quickSand" style="font-size: 3vmax;padding: 1vmax">
-        <span class="no600"><br></span>
-        suspicion of arrhythmic syncope.
-    </div>
-    <div class="w3-col s7 w3-center w3-display-container" style="padding: 1vmax 0 1vmax 1vmax">
-        <img src="media/init/tele.png" style="opacity: 0.5" class="w3-sepia">
+    
+    <div class="w3-display-container" style="background-color:#ffb76e;">
+        <img src="media/init/tele.png" style="mix-blend-mode: exclusion">
         <div class="w3-display-middle bree"
-        style="mix-blend-mode: screen;background-color:#ff8000;
-        font-size: 4vmax;font-weight: 900; text-shadow: rgba(0, 0, 0,0.4) 0 0 0.4vmax">
-        ECG Monitoring
+        style="background-color: rgba(242, 223, 200,0.6);line-height: 100%;text-align: center;
+        font-size: 5vmax;font-weight: 900; text-shadow: rgba(0, 0, 0,0.4) 0 0 0.4vmax">
+        ECG Monitoring<br><span class="quickSand" style="font-size: 2.5vmax;text-align: justify;
+        line-height: 80%">
+        suspicion of arrhythmic syncope.    
+        </span>
         </div>        
     </div>    
     </div>
 
-    <div class="w3-btn next" onmouseover="next(6)"></div>
+    <div class="w3-btn next" onmouseover="next(7)"></div>
 </div>
 
 <!--end pointer div-->

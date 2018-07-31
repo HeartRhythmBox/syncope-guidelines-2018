@@ -8,35 +8,34 @@
 <link rel="stylesheet" type="text/css" href="cssSyncope.css">
 </head>
 <style>
+.mainTable {border-spacing: 0;border-collapse: collapse;cursor: pointer;text-decoration: none}
 .mainList {font-family: 'Quicksand', sans-serif;font-size: 1.5vmax;color: #797979;
             border-right: 0.2vmax black solid;margin: 0;
             padding:0 0.5vmax;text-align: right}
-.bigList {font-size: 2vmax;font-weight: bold;color: black;
-            display: none;overflow: hidden;
-            }
-.incList:hover {border-right: none;
+.bigList {font-size: 1.5vmax;font-weight: bold;color: black;opacity: 0;text-align: left}
+
+.incList {visibility: visible}
+.mainTable:hover .incList {border-right: none;
                 -webkit-animation: slideRight 1s 1 ease; /* Safari 4.0 - 8.0 */
-                animation: slideRight 1s 1 ease;}
+                animation: slideRight 1s 1 ease-in-out;visibility: hidden;
+                -webkit-transition: visibility 0.5s ease; /* For Safari 3.1 to 6.0 */
+                transition: visibility 0.5s ease}
+.mainTable:hover .bigList {opacity: 1;border-left: 1vmax black solid;font-size: 2vmax;
+    -webkit-transition:opacity 1s ease-in;             
+    transition: opacity 1s ease-in;transition-delay: 0.5s}
+                
 @keyframes slideRight {
     0% {transform: translateX(0%)}
-    70% {transform: translateX(100%)}
-    100% {color: transparent}
+    70% {transform: translateX(80%);}
+    100% {color: transparent;text-align: left}
 }
 
 @-webkit-keyframes slideRight {
     0% {transform: translateX(0%)}
-    70% {transform: translateX(100%)}
+    70% {transform: translateX(80%)}
     100% {color: transparent}
 } 
 
-@keyframes fadein {
-    0% {opacity: 0}
-    100% {opacity: 1}
-}
-@-webkit-keyframes fadein {
-    0% {opacity: 0}
-    100% {opacity: 1}
-}
 
 </style>
 
@@ -51,15 +50,16 @@
     class="quickSand lGTxt" style="text-decoration: none; font-size: 1vmax">
         2018 ESC Guidelines<span class="no600"> for the diagnosis and management of syncope</span></a>
     
-    <div class="w3-content w3-center" style="margin-top: 8vh">
-    <table class="quickSand mainTable" style="border-spacing: 0;cursor: pointer;" 
-    onmouseover="show('bigList')" onmouseout="hide('bigList')">
+    <div class="w3-content w3-center" style="margin-top: 5vh">
+    <a href="#test" style="text-decoration: none">
+    <table class="quickSand mainTable">
         <tr>
             <td class="mainList">ambulatory bp monitoring</td>
             <td></td>
         </tr>
         <tr>
-            <td class="mainList">autonomic function test</td><td></td>
+            <td class="mainList">autonomic function test</td>
+            <td></td>
         </tr>
         <tr>
             <td class="mainList">cardiac markers</td>
@@ -67,15 +67,15 @@
         </tr>
         <tr>
             <td class="mainList incList">carotid sinus massage</td>
-            <td class="bigList">CAROTID SINUS MASSAGE</td>
+            <td class="bigList">Carotid Sinus Massage</td>
         </tr>
         <tr>
             <td class="mainList">coronary angiogram</td>
             <td></td>
         </tr>
         <tr>
-            <td class="mainList">ep study</td>
-            <td></td>
+            <td class="mainList incList">ep study</td>
+            <td class="bigList">EP Study</td>
         </tr>
         <tr>
             <td class="mainList">holter/event monitoring</td>
@@ -86,20 +86,20 @@
             <td></td>
         </tr>
         <tr>
-            <td class="mainList">loop recorder</td>
-            <td></td>
+            <td class="mainList incList">loop recorder</td>
+            <td class="bigList">Loop Recorder</td>
         </tr>
         <tr>
-            <td class="mainList">tilt testing</td>
-            <td></td>
+            <td class="mainList incList">tilt testing</td>
+            <td class="bigList">Tilt Testing</td>
         </tr>
         <tr>
             <td class="mainList">video recording</td>
             <td></td>
         </tr>
 
-
-    </table></div>
+    
+    </table></a></div>
 
     
     
@@ -139,8 +139,28 @@
 <div onclick="pointer()"><span class="pointer" style="display: none"></span> 
 
 <!--blk1 triggers-->
-<div id="hx" class="block">    
-            
+<div id="test" class="block">    
+    <div class="w3-container quickSand" style="background-color: #ebf1fc">
+        <div class="w3-row w3-wide w3-center" style="margin-top: 10vh;font-size: 5vmax;line-height: 100%">
+            CONCEPT </div>
+        <div class="w3-row quickSand w3-center lGTxt" style="font-size: 2vmax;">
+            &nbsp;&nbsp;<em>to</em> record &bull; <em>to</em> provoke
+        </div>
+        <div class="w3-row quickSand" style="font-size: 2vmax;margin-top: 2vh">
+            <div class="w3-col s6 w3-mobile" style='border-right: #797979 0.1vmax solid;padding: 0.1vmax 0.4vmax;
+            text-align: right'>
+                <div class="w3-bar">
+                    <b>Ambulatory BP</b> 
+                </div>
+            </div>
+            <div class="w3-col s6 w3-mobile"  style="padding: 0.1vmax 0.4vmax">
+                <div class="w3-bar">
+                    <b>Autonomic function test</b> 
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <div class="w3-btn next" onmouseover="next(1)"></div>
 </div>
 
@@ -195,24 +215,6 @@ window.addEventListener("keydown", function(event) {
 
 window.ontouchmove = function () {unblur()};
 window.onscroll = function() {scroll()};
-
-function show(classname) {
-    var name = document.getElementsByClassName(classname);
-    var i;
-    for (i=0;i<name.length;i++){
-        name[i].style.transition='all linear 2s 2s';
-        name[i].style.display='block';
-        
-    }
-}
-
-function hide(classname) {
-    var name = document.getElementsByClassName(classname);
-    var i;
-    for (i=0;i<name.length;i++){
-        name[i].style.display='none';
-    }
-}
 
 </script>	
 

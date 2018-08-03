@@ -57,6 +57,16 @@
     .holder {margin: 0}
 }
 
+.epBlk {
+    height: 80vh;width: 100%;
+    margin-top: 5vh;
+    background: linear-gradient(to bottom right, white 0%, #f1f1f1 40%,white 100%);
+}
+
+.epBar {cursor: pointer;}
+a {text-decoration: none}
+.bS {display: none;}
+
 </style>
 
 <div class="main">
@@ -330,6 +340,58 @@ padding-top: 290px;padding-bottom: 5vmax">
         Electrophysiologic Study
         </div>
     </div>
+
+    <div class="epBlk">
+        <div class="w3-bar quickSand w3-center" style="font-size: 2vmax;color:#797979;
+        background:linear-gradient(to right, white 0%,#f1f1f1 100%) ">
+        <div id="brady0" class="w3-bar-item epBar" onclick="showSlide(this)">
+            brady &nbsp; <span style="color: #ddd">|</span></div>    
+        <div id="brady2" class="w3-bar-item epBar" onclick="showSlide(this)">
+            bifascicular block (bfb) &nbsp; <span style="color: #ddd">|</span></div>
+        <div id="brady3" class="w3-bar-item epBar" onclick="showSlide(this)">
+            rationale on bfb  &nbsp; <span style="color: #ddd">|</span></div>
+        <div id="brady1" class="w3-bar-item epBar" onclick="showSlide(this)">
+            sinus node dysfunction</div>
+        </div>
+        
+        <!--brady home-->
+        <div id="bS0" class="bS w3-container">
+            <div class="w3-cell-row" style="padding: 1vmax;">
+                <div class="w3-cell w3-container w3-cell-middle w3-right-align">
+                    <img src="media/test/Electrical_conduction_system_of_the_heart.svg.png"
+                    style="opacity: 0.5;max-height: 70vh">
+                </div>
+                <div class="w3-cell w3-container w3-cell-middle quickSand" style="font-size: 2.5vmax;
+                        display: table-cell;vertical-align: middle">
+                    <span style="font-size: 3vmax;font-weight: 900">
+                    EP Study for Suspected Bradycardia</span><br>
+                    <span style="color: #797979">
+                        Bifascicular Block</span> |
+                    <span style="color: #797979">
+                    Sinus Node Dysfunction</span>  
+                    
+                </div>
+            </div>
+        </div>
+
+
+        <!--brady BFB-->
+        <div id="bS1" class="bS w3-container">
+            BFB
+        </div>
+
+        <!--brady BFB2-->
+        <div id="bS2" class="bS w3-container">
+            BFB rational
+        </div>
+
+        <!--brady SND-->
+        <div id="bS3" class="bS w3-container">
+        SND
+        </div>
+        
+    </div>
+
     <div class="w3-btn next" onmouseover="next(3)"></div>
 </div>
 
@@ -376,6 +438,32 @@ window.addEventListener("keydown", function(event) {
 
 window.ontouchmove = function () {unblur()};
 window.onscroll = function() {scroll()};
+document.getElementsByClassName('bS')[0].style.display = 'block';
+document.getElementById('brady0').style.color = '#66390c';
+document.getElementById('brady0').style.fontWeight = '900';
+
+function showSlide(n) {
+    //id = #brady0, number = 0-3
+    var id = n.id;
+    var numberStr = id.slice(-1);var number = Number(numberStr);
+    
+    //idLabel = brady
+    var idLabel = id.slice(0,-1);
+    //setClass = className bS, tS
+    var set = id.charAt(0);var setClass = set + 'S';
+    var slideSet = document.getElementsByClassName(setClass);
+    var i;
+    for (i=0;i<slideSet.length;i++) {
+        slideSet[i].style.display = 'none';
+        //idLabelFull = brady0-3
+        var idLabelFull = idLabel + i;
+        document.getElementById(idLabelFull).style.color = '#ddd';
+        document.getElementById(idLabelFull).style.fontWeight = '400';
+    }
+    document.getElementById(id).style.color = '#66390c';
+    document.getElementById(id).style.fontWeight = '900';
+    slideSet[number].style.display = 'block';
+}
 
 </script>	
 

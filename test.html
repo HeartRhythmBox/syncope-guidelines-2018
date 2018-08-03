@@ -344,25 +344,30 @@ padding-top: 290px;padding-bottom: 5vmax">
     <div class="epBlk">
         <div class="w3-bar quickSand w3-center" style="font-size: 2vmax;color:#797979;
         background:linear-gradient(to right, white 0%,#f1f1f1 100%) ">
-        <div id="brady0" class="w3-bar-item epBar" onclick="showSlide(this)">
-            brady &nbsp; <span style="color: #ddd">|</span></div>    
-        <div id="brady2" class="w3-bar-item epBar" onclick="showSlide(this)">
-            bifascicular block (bfb) &nbsp; <span style="color: #ddd">|</span></div>
-        <div id="brady3" class="w3-bar-item epBar" onclick="showSlide(this)">
-            rationale on bfb  &nbsp; <span style="color: #ddd">|</span></div>
-        <div id="brady1" class="w3-bar-item epBar" onclick="showSlide(this)">
-            sinus node dysfunction</div>
+        <div id="brady0" class="w3-bar-item epBar w3-hover-opacity" onclick="showSlide(this)" 
+            style="border-right: #dddddd 0.1vmin solid">
+            brady</div>    
+        <div id="brady2" class="w3-bar-item epBar w3-hover-opacity" onclick="showSlide(this)"
+        style="border-right: #dddddd 0.1vmin solid" title="bifascicular block" >
+            <span class="no600">bifascicular block (</span>bfb<span class="no600">)</span></div>
+        <div id="brady3" class="w3-bar-item epBar w3-hover-opacity" onclick="showSlide(this)"
+        style="border-right: #dddddd 0.1vmin solid">
+            rationale on bfb</div>
+        <div id="brady1" class="w3-bar-item epBar w3-hover-opacity" onclick="showSlide(this)">
+            <span class="no600">sinus node dysfunction</span>
+            <span class="only600" title="sinus node dysfunction">snd</span>
+            </div>
         </div>
         
         <!--brady home-->
         <div id="bS0" class="bS w3-container">
             <div class="w3-cell-row" style="padding: 1vmax;">
-                <div class="w3-cell w3-container w3-cell-middle w3-right-align">
+                <div class="w3-cell w3-mobile w3-container w3-cell-middle w3-right-align">
                     <img src="media/test/Electrical_conduction_system_of_the_heart.svg.png"
-                    style="opacity: 0.5;max-height: 70vh">
+                    style="opacity: 0.5;max-height: 60vh;padding-top: 2vmax;vertical-align: middle">
                 </div>
-                <div class="w3-cell w3-container w3-cell-middle quickSand" style="font-size: 2.5vmax;
-                        display: table-cell;vertical-align: middle">
+                <div class="w3-cell w3-mobile w3-container w3-cell-middle quickSand" style="font-size: 2.5vmax;
+                        vertical-align: middle">
                     <span style="font-size: 3vmax;font-weight: 900">
                     EP Study for Suspected Bradycardia</span><br>
                     <span style="color: #797979">
@@ -457,7 +462,7 @@ function showSlide(n) {
         slideSet[i].style.display = 'none';
         //idLabelFull = brady0-3
         var idLabelFull = idLabel + i;
-        document.getElementById(idLabelFull).style.color = '#ddd';
+        document.getElementById(idLabelFull).style.color = '#797979';
         document.getElementById(idLabelFull).style.fontWeight = '400';
     }
     document.getElementById(id).style.color = '#66390c';

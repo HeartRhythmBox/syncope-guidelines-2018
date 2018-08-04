@@ -66,6 +66,7 @@
 .epBar {cursor: pointer;}
 a {text-decoration: none}
 .bS {display: none;}
+.tS {display: none;}
 
 </style>
 
@@ -180,7 +181,7 @@ a {text-decoration: none}
             <span class="brown2Txt" style="font-weight: 900">provoke</span>
     </div>
     <div class="w3-row" style="padding-top:5vh">
-        <div class="w3-col s6 w3-mobile" style="padding: 3vmax;">
+        <div class="w3-col s6 w3-mobile" style="padding: 2.2vmax;">
         <ul class="w3-ul conceptList" style="border: #b2843d 0.1vmax solid;border-radius: 2vmax">
             <li>
                 <div class="record">ABPM 
@@ -451,11 +452,25 @@ padding-top: 290px;padding-bottom: 5vmax">
             style="border-right: #dddddd 0.1vmin solid">
             tachy</div>    
         <div id="tachy1" class="w3-bar-item epBar w3-hover-opacity" onclick="showSlide(this)"
-        style="border-right: #dddddd 0.1vmin solid" title="bifascicular block" >
-            <span class="no600">post MI</div>
+        style="border-right: #dddddd 0.1vmin solid" >
+            post MI</div>
         <div id="tachy2" class="w3-bar-item epBar w3-hover-opacity" onclick="showSlide(this)"
         style="border-right: #dddddd 0.1vmin solid">
             others</div>
+        </div>
+    
+    <!--tachy home-->
+    <div id="tS0" class="tS w3-container quickSand">  
+        Tachy
+    </div>  
+    <div id="tS1" class="tS w3-container quickSand">  
+            Tachy1
+        </div>
+    <div id="tS2" class="tS w3-container quickSand">  
+                Tachy2
+        </div> 
+
+
     </div>
 
 
@@ -508,6 +523,10 @@ window.onscroll = function() {scroll()};
 document.getElementsByClassName('bS')[0].style.display = 'block';
 document.getElementById('brady0').style.color = '#66390c';
 document.getElementById('brady0').style.fontWeight = '900';
+document.getElementsByClassName('tS')[0].style.display = 'block';
+document.getElementById('tachy0').style.color = '#66390c';
+document.getElementById('tachy0').style.fontWeight = '900';
+
 
 function showSlide(n) {
     //id = #brady0, number = 0-3

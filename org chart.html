@@ -1,0 +1,64 @@
+<html>
+  <head>
+    
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {packages:["orgchart"]});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Name');
+        data.addColumn('string', 'Manager');
+        data.addColumn('string', 'ToolTip');
+
+        // For each orgchart box, provide the name, manager, and tooltip to show.
+        data.addRows([
+        [{v:'reflex', f:'Reflex Syncope'},
+           '', ''],
+        [{v:'educ', f:'<div style="background-color: green;color:white">Education and Life-Style Measures</div>'},
+           'reflex', 'Class I'],
+        [{v:'form', f:'Severe or Recurrent Form'},'educ', ''],
+        [{v:'lowBp', f:'Low BP Phenotype'},'form', ''], 
+           ['<div style="background-color: orange;color:white">Fludrocortisone, Midodrine</div>','lowBp', 'classIIb'],
+        [{v:'proD', f:'Prodromes'},'form', ''],
+            ['Y','proD',''], ['N','proD','No or Very Short'],
+            ['<div style="background-color: yellow;color:black">Counter-pressure Manuever(IIa)</div><div style="background-color: orange;color:white">Tilt-training(IIb)</div>','Y',''],
+            ['<div style="background-color: green;color:white">ILR</div>','N','class I; ILR-guided Therapy'],
+        [{v:'bpMed', f:'Hypotensive Drugs'},'form', ''],
+            ['<div style="color:black">Stop or Reduce Hypotensive Drugs</div>','bpMed','IIa'],
+        [{v:'pause', f:'Dominant Cardioinhibition'},'form', ''],
+            ['Cardiac Pacing(IIa-IIb)','pause','IIa for spontaneous, IIb for tilt-induced']          
+        ]);
+
+    data.setRowProperty (0,'style', 'border: none;background: #c0cfe3;font-Size: 3vmax;')
+    data.setRowProperty (1,'style', 'border: none;background: green;font-Size: 2vmax;')
+    data.setRowProperty (2,'style', 'background:none;font-Size: 2vmax')
+    data.setRowProperty (3,'style', 'border: #c0cfe3 solid 0.2vmax;background: none;font-Size: 2vmax')
+    data.setRowProperty (4,'style', 'border:none; background: orange;font-Size: 2vmax')
+    data.setRowProperty (5,'style', 'border: #c0cfe3 solid 0.2vmax;background: none;font-Size: 2vmax')
+    data.setRowProperty (6,'style', 'border: #c0cfe3 solid 0.2vmax;background: none;font-Size: 2vmax')
+    data.setRowProperty (7,'style', 'border: #c0cfe3 solid 0.2vmax;background: none;font-Size: 2vmax')
+    data.setRowProperty (8,'style', 'border: none;background: none;font-Size: 2vmax')
+    data.setRowProperty (9,'style', 'border: none;background: green;font-Size: 2vmax')
+    data.setRowProperty (10,'style', 'border: #c0cfe3 solid 0.2vmax;background: none;font-Size: 2vmax')
+    data.setRowProperty (11,'style', 'border: none;background: yellow;font-Size: 2vmax')
+    data.setRowProperty (12,'style', 'border: #c0cfe3 solid 0.2vmax;background: none;font-Size: 2vmax')
+    data.setRowProperty (13,'style', 'border: none;background: linear-gradient(to bottom, #ffff00 0%, #ffa500 100%);font-Size: 2vmax')
+
+        // Create the chart.
+        var chart = new google.visualization.OrgChart(document.getElementById('chart_div'));
+        // Draw the chart, setting the allowHtml option to true for the tooltips.
+        
+        var options = {
+            allowHtml:true, allowCollapse:true
+        }
+
+        chart.draw(data, options);
+      }
+   </script>
+    </head>
+  <body>
+    <div id="chart_div" style="font-family: 'Quicksand', sans-serif;padding: 1vmax"></div>
+  </body>
+</html>

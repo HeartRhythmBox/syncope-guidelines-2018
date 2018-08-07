@@ -4,10 +4,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="https://fonts.googleapis.com/css?family=Quicksand|BenchNine" rel="stylesheet">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"> 
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"> 
 <link rel="stylesheet" type="text/css" href="cssSyncope.css">
 </head>
 <style>
+.algo1 li, .algo2 li {border: none;display: none}
+.algo1 li:first-child, .algo1 li:nth-child(2), .algo1 li:nth-child(3), .algo1 li:nth-child(4) {
+    display: block}
+.algo2 li:first-child, .algo2 li:nth-child(2), .algo2 li:nth-child(3), .algo2 li:nth-child(4),
+.algo2 li:nth-child(5), .algo2 li:nth-child(6) {display: block}
+.epBar {font-size: 2vmax;cursor: pointer;background: rgb(32, 32, 32);color: white;}
+.epBar :hover {background: #797979}
+.epSlide {display: none;padding: 1vmax;}
+.epSlide img {width: 100%;padding: 1vmax 20%}
 
 </style>
 
@@ -25,7 +34,7 @@
     <div class="w3-display-container w3-center" style="margin-top: 24vh">  
     <a href="#rx" style="text-decoration: none">
     <div class="quickSand w3-wide w3-display-middle" id="rxHead" style="font-size: 3vmax;
-        text-align: left;line-height: 125%;">
+        text-align: left;line-height: 125%;" onclick="next(0)">
         
     </div></a>    
     </div>
@@ -66,52 +75,143 @@
 <!--pointer-->
 <div onclick="pointer()"><span class="pointer" style="display: none"></span> 
 
-<!--blk1 CIEDs-->
-<div id="rx" class="block quickSand">    
+<!--blk1 Reflex and OH -->
+<div id='rx' class="block"> 
     <div class="w3-row">
-        <div class="w3-col s4">
-            PACEMAKER for syncope with...
-            Symptomatic sinus node dysfunction (I)
-            Asymptomatic sinus node dysfunction (IIa)
-            High grade AV block(I)
-            Bifascicular block and +EPS for HV>70 or inducible AV block (I)
-            Bifascicular block and +ILR (I)
+        <div class="w3-col s6 w3-center quickSand" style="padding: 1vmax 3vmax">
+        <ul class="w3-ul algo1">
+            <li class="algo1L" style="font-size: 3vmax;font-weight: 900">Reflex Syncope</li>
+            <li class="algo1L"><i class="fas fa-arrow-down" style="font-size:3vmax;;color: #3B5998"></i></li>
+            <li class="w3-round-xlarge algo1L" style="font-size: 2.2vmax;background-color: green;
+            color: white;padding: 0vmax">Education and Life-style Measures (I)</li>
+            <li><i class="fas fa-angle-double-down" style="font-size:3vmax;color: red;cursor: pointer;"
+                title="click here for more" onclick="showTheRest('algo1L')">
+                </i></li>
+            <li class="w3-round-xlarge algo1L" style="font-size: 2.2vmax;background-color: #f1f3f4;
+            padding: 0vmax" title="severe = when very frequent syncope alters quality of life; 
+            when recurrent syncope without, or with a very short, prodrome exposes the patient to a 
+            risk of trauma; 
+            and when syncope occurs during a high-risk activity">Severe or Recurrent Form</li>
+            <li class="algo1L"><i class="fas fa-arrow-down" style="font-size:3vmax;;color: #3B5998"></i></li>
+            <li class="algo1L" style="background-color:orange;color:white;font-size: 1.8vmax;">
+                Fludrocortisone or Midodrine for low BP type.(IIb)</li>
+            <li class="algo1L" style="background: linear-gradient(to bottom right, yellow 0%, orange 100%);font-size: 1.8vmax">
+                Counter-pressure Maneuver (IIa),<br> Tilt Training (IIb) for those with prodrome.</li>
+            <li class="algo1L" style="background-color:green;color:white;font-size: 1.8vmax;">
+                    ILR guided management (I) for those with minimal or no progrome.</li>
+            <li class="algo1L" style="background-color:yellow;font-size: 1.8vmax;">
+                Stop or Reduce hypotensive drugs (IIa)</li>
+            <li class="algo1L" style="background: linear-gradient(to bottom right, yellow 0%, orange 100%);
+            font-size: 1.8vmax" title="IIa for spontaneous, IIb for tilt-induced">
+                Cardiac Pacing (IIa-IIb) for dominant cardioinhibitory and age>40.</li>
+        </ul>
         </div>
-        <div class="w3-col s4">
-            ICD for syncope with...
-            VT and LVEF <=35% (I)
-            Prior MI and +EPS for VT (I)
-            High-risks HCM (I)
-            LQTs with adequate beta blockers (IIa)
-            Spontaneous type I Brugada (IIa)
+
+        <div class="w3-col s6 w3-center quickSand" style="padding: 1vmax 3vmax">
+        <ul class="w3-ul algo2">
+            <li class="algo2L" style="font-size: 3vmax;font-weight: 900">Syncope due to 
+                    Orthostatic Hypotension</li>
+            <li class="algo2L"><i class="fas fa-arrow-down" style="font-size:3vmax;;color: #3B5998"></i></li>
+            <li class="w3-round-xlarge algo2L" style="font-size: 2.2vmax;background-color: green;
+            color: white;padding: 0vmax">Education and Life-style Measures (I)</li>
+            <li class="w3-round-xlarge algo2L" style="font-size: 2.2vmax;background-color: green;
+            color: white;padding: 0vmax">Adequate Hydration and Salt Intake (I)</li>
+            <li class="w3-round-xlarge algo2L" style="font-size: 2.2vmax;background-color: yellow;
+            color: black;padding: 0vmax" title="any antihypertensive agents, nitrates, diuretics, 
+            neuroleptic antidepressants, or dopaminergic drugs">
+            Discontinue or Reduce Vasoactive Drugs (IIa)</li>    
+            <li><i class="fas fa-angle-double-down" style="font-size:3vmax;color: red;cursor: pointer;"
+                title="click here for more" onclick="showTheRest('algo2L')">
+                </i></li>
+            <li class="w3-round-xlarge algo2L" style="font-size: 2.2vmax;background-color: #f1f3f4;">
+                If symptoms persist</li>
+            <li class="algo2L"><i class="fas fa-arrow-down" style="font-size:3vmax;;color: #3B5998"></i></li>
+            <li class="algo2L" style="background-color:yellow;font-size: 1.8vmax;">
+                Compression Garments, Counter-pressure Maneuver, Head-up Tilt Sleeping, Midrodrine,
+                Fludrocortisone (IIa)</li>
+        </ul>
         </div>
-        <div class="w3-col s4">
-            Catheter ablaion for syncope due to SVT or VT.(I)
     </div>
-  
+
+    
     <div class="w3-btn next" onmouseover="next(1)"></div>
 </div>
 
-<!--blk2 -->
-<div class="block"> 
-    
+
+<!--blk2 CIEDs-->
+<div class="block quickSand">    
+    <div class="w3-row w3-center quickSand" style="font-size: 3.5vmax; padding: 2vmax">
+        Specific Therapy for Cardiac Syncope
+    </div>
+    <div class="w3-container">
+        <div class="w3-bar quickSand epBar">
+            <div class="w3-bar-item epBar" onclick="showHide('epSlide',0)" style="border-right: #797979 0.1vmax inset">
+                <span class="no600">Pacemaker</span>
+                <span class="only600">PPM</span>
+            </div>
+            <div class="w3-bar-item epBar" onclick="showHide('epSlide',1)" style="border-right: #797979 0.1vmax inset">
+                <span class="no600">Implantable-cardioverter Defibrillator</span>
+                <span class="only600">ICD</span>
+            </div>
+            <div class="w3-bar-item epBar" onclick="showHide('epSlide',2)">
+                <span class="no600">Catheter Ablation</span>
+                <span class="only600">Ablation</span>
+            </div>
+        </div>
+        <div class="w3-container w3-center quickSand" style="background: black;font-size: 1.8vmax;
+        line-height: 120%">
+            <div class="w3-display-container epSlide">
+            <img src="media/rx/PPM.jpg">
+            <div class="w3-display-left w3-card-4" style="background: rgba(255,255,255,0.8);text-align: left;
+            padding: 0.5vmax">
+            <span style="font-weight: 900;color: green;font-size: 2vmax">PACEMAKER for syncope with...</span><br>
+            Symptomatic sinus node dysfunction (I)<br>
+            Asymptomatic sinus node dysfunction (IIa)<br>
+            High grade AV block(I)<br>
+            Bifascicular block and +EPS for HV>70 or inducible AV block (I)<br>
+            Bifascicular block and +ILR (I)</div>
+            </div>
+        
+            <div class="w3-display-container epSlide">
+            <img src="media/rx/dICD.png">
+            <div class="w3-display-middle w3-card-4" style="background: rgba(255,255,255,0.8);text-align: left;
+            padding: 0.5vmax">
+            <span style="font-weight: 900;color: green;font-size: 2vmax">ICD for syncope with...</span><br>
+            VT and LVEF &le;35% (I) <br>
+            Prior MI and +EPS for VT (I) <br>
+            High-risks HCM (I)<br>
+            LQTs with adequate beta blockers (IIa)<br>
+            Spontaneous type I Brugada (IIa)</div>
+            </div>
+
+            <div class="w3-display-container epSlide">
+            <img src="media/rx/Abl.png">
+            <div class="w3-display-topmiddle" style="background: rgba(255,255,255,0.8);text-align: left;
+                    padding: 0.5vmax;font-size: 2.5vmax;line-height: 130%">
+            Catheter ablation for syncope due to SVT or VT (I)</div>
+            </div>
+        </div>
+    </div>
+  
     <div class="w3-btn next" onmouseover="next(2)"></div>
 </div>
 
+
 <!--blk3-->
 <div class="block"> 
- 
+    <div class="w3-row w3-center">
+    
     <div class="w3-btn next" onmouseover="next(3)"></div>
 </div>
 
 <!--blk4 -->
 <div class="block" style="background-color: #f6d748" > 
- 
+     
     <div class="w3-btn next" onmouseover="next(4)"></div>
 </div>
 
 <!--blk5 -->
-<div class="block" style="padding: 1vmax;background-color: #f1f3f4"> 
+<div class="block" style="padding: 1vmax;"> 
     
     <div class="w3-btn next" onmouseover="next(5)"></div>
 </div>
@@ -145,14 +245,18 @@ window.addEventListener("keydown", function(event) {
         window.unblur()}
     })
 
-window.ontouchmove = function () {unblur()};
-window.onscroll = function() {scroll()};
-window.onload = function () {showArray()};
+
+window.ontouchmove = function () {unblur()}
+window.onscroll = function() {scroll()}
+window.onload = function () {showArray();showHide('epSlide',0)}
+
+
 
 /**typewriter**/
 var txtArray = ['be Correlative.', 'be Informative.', 'be Specific.'];
 
 var iNo =0;var aNo =0;
+
 function showArray() {
     if (aNo < txtArray.length) {
         setTimeout(typeWriter, 800); }
@@ -165,6 +269,23 @@ function typeWriter() {
     else {aNo++;iNo=0;
     document.getElementById("rxHead").innerHTML += '<br>'
     showArray()}
+}
+
+function showTheRest(name) {
+    var algo = document.getElementsByClassName(name);
+    var i;
+    for (i=0;i<algo.length;i++){
+        algo[i].style.display = 'block'
+    }
+}
+
+function showHide (slide,no) {
+    var slideClass = document.getElementsByClassName(slide);
+    var i;
+    for (i=0;i<slideClass.length;i++) {
+        slideClass[i].style.display = 'none'
+    }
+    slideClass[no].style.display = 'inline'
 }
 
 </script>	

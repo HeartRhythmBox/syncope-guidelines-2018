@@ -13,8 +13,8 @@
     display: block}
 .algo2 li:first-child, .algo2 li:nth-child(2), .algo2 li:nth-child(3), .algo2 li:nth-child(4),
 .algo2 li:nth-child(5), .algo2 li:nth-child(6) {display: block}
-.epBar {font-size: 2vmax;cursor: pointer;background: rgb(32, 32, 32);color: white;}
-.epBar :hover {background: #797979}
+.epBar {font-size: 2vmax;cursor: pointer;background: #b7cbe6;color: black;}
+.epBar :hover {background: #ababab}
 .epSlide {display: none;padding: 1vmax;}
 .epSlide img {width: 100%;padding: 1vmax 20%}
 
@@ -83,12 +83,12 @@
         <ul class="w3-ul algo1">
             <li class="algo1L" style="font-size: 3vmax;font-weight: 900">Reflex Syncope</li>
             <li class="algo1L"><i class="fas fa-arrow-down" style="font-size:3vmax;;color: #3B5998"></i></li>
-            <li class="w3-round-xlarge algo1L" style="font-size: 2.2vmax;background-color: green;
+            <li class="w3-round-large algo1L" style="font-size: 2.2vmax;background-color: green;
             color: white;padding: 0vmax">Education and Life-style Measures (I)</li>
             <li><i class="fas fa-angle-double-down" style="font-size:3vmax;color: red;cursor: pointer;"
                 title="click here for more" onclick="showTheRest('algo1L')">
                 </i></li>
-            <li class="w3-round-xlarge algo1L" style="font-size: 2.2vmax;background-color: #f1f3f4;
+            <li class="w3-round-large algo1L" style="font-size: 2.2vmax;background-color: #f1f3f4;
             padding: 0vmax" title="severe = when very frequent syncope alters quality of life; 
             when recurrent syncope without, or with a very short, prodrome exposes the patient to a 
             risk of trauma; 
@@ -113,18 +113,18 @@
             <li class="algo2L" style="font-size: 3vmax;font-weight: 900">Syncope due to 
                     Orthostatic Hypotension</li>
             <li class="algo2L"><i class="fas fa-arrow-down" style="font-size:3vmax;;color: #3B5998"></i></li>
-            <li class="w3-round-xlarge algo2L" style="font-size: 2.2vmax;background-color: green;
+            <li class="w3-round-large algo2L" style="font-size: 2.2vmax;background-color: green;
             color: white;padding: 0vmax">Education and Life-style Measures (I)</li>
-            <li class="w3-round-xlarge algo2L" style="font-size: 2.2vmax;background-color: green;
+            <li class="w3-round-large algo2L" style="font-size: 2.2vmax;background-color: green;
             color: white;padding: 0vmax">Adequate Hydration and Salt Intake (I)</li>
-            <li class="w3-round-xlarge algo2L" style="font-size: 2.2vmax;background-color: yellow;
+            <li class="w3-round-large algo2L" style="font-size: 2.2vmax;background-color: yellow;
             color: black;padding: 0vmax" title="any antihypertensive agents, nitrates, diuretics, 
             neuroleptic antidepressants, or dopaminergic drugs">
             Discontinue or Reduce Vasoactive Drugs (IIa)</li>    
             <li><i class="fas fa-angle-double-down" style="font-size:3vmax;color: red;cursor: pointer;"
                 title="click here for more" onclick="showTheRest('algo2L')">
                 </i></li>
-            <li class="w3-round-xlarge algo2L" style="font-size: 2.2vmax;background-color: #f1f3f4;">
+            <li class="w3-round-large algo2L" style="font-size: 2.2vmax;background-color: #f1f3f4;">
                 If symptoms persist</li>
             <li class="algo2L"><i class="fas fa-arrow-down" style="font-size:3vmax;;color: #3B5998"></i></li>
             <li class="algo2L" style="background-color:yellow;font-size: 1.8vmax;">
@@ -144,55 +144,38 @@
     <div class="w3-row w3-center quickSand" style="font-size: 3.5vmax; padding: 2vmax">
         Specific Therapy for Cardiac Syncope
     </div>
-    <div class="w3-container">
-        <div class="w3-bar quickSand epBar">
-            <div class="w3-bar-item epBar" onclick="showHide('epSlide',0)" style="border-right: #797979 0.1vmax inset">
-                <span class="no600">Pacemaker</span>
-                <span class="only600">PPM</span>
-            </div>
-            <div class="w3-bar-item epBar" onclick="showHide('epSlide',1)" style="border-right: #797979 0.1vmax inset">
-                <span class="no600">Implantable-cardioverter Defibrillator</span>
-                <span class="only600">ICD</span>
-            </div>
-            <div class="w3-bar-item epBar" onclick="showHide('epSlide',2)">
-                <span class="no600">Catheter Ablation</span>
-                <span class="only600">Ablation</span>
-            </div>
-        </div>
-        <div class="w3-container w3-center quickSand" style="background: black;font-size: 1.8vmax;
-        line-height: 120%">
-            <div class="w3-display-container epSlide">
-            <img src="media/rx/PPM.jpg">
-            <div class="w3-display-left w3-card-4" style="background: rgba(255,255,255,0.8);text-align: left;
-            padding: 0.5vmax">
-            <span style="font-weight: 900;color: green;font-size: 2vmax">PACEMAKER for syncope with...</span><br>
-            Symptomatic sinus node dysfunction (I)<br>
-            Asymptomatic sinus node dysfunction (IIa)<br>
-            High grade AV block(I)<br>
-            Bifascicular block and +EPS for HV>70 or inducible AV block (I)<br>
-            Bifascicular block and +ILR (I)</div>
-            </div>
-        
-            <div class="w3-display-container epSlide">
-            <img src="media/rx/dICD.png">
-            <div class="w3-display-middle w3-card-4" style="background: rgba(255,255,255,0.8);text-align: left;
-            padding: 0.5vmax">
-            <span style="font-weight: 900;color: green;font-size: 2vmax">ICD for syncope with...</span><br>
-            VT and LVEF &le;35% (I) <br>
-            Prior MI and +EPS for VT (I) <br>
-            High-risks HCM (I)<br>
-            LQTs with adequate beta blockers (IIa)<br>
-            Spontaneous type I Brugada (IIa)</div>
-            </div>
-
-            <div class="w3-display-container epSlide">
-            <img src="media/rx/Abl.png">
-            <div class="w3-display-topmiddle" style="background: rgba(255,255,255,0.8);text-align: left;
-                    padding: 0.5vmax;font-size: 2.5vmax;line-height: 130%">
-            Catheter ablation for syncope due to SVT or VT (I)</div>
-            </div>
-        </div>
-    </div>
+    <div class="w3-responsive">
+    <table class="w3-table  w3-padding w3-bordered quickSand" style="line-height: 130%;font-size: 2vmax">
+        <tr class="w3-hover-light-grey">
+            <td style="width: 30vw"><img src="media/rx/PPM.jpg" style="opacity: 0.9"></td>
+            <td style="padding: 1vmax">
+                <span style="font-weight: 900;color: #b2843d;font-size: 2.5vmax">PACEMAKER for syncope with...</span><br>
+                Symptomatic sinus node dysfunction (I)<br>
+                Asymptomatic sinus node dysfunction (IIa)<br>
+                High grade AV block(I)<br>
+                Bifascicular block and +EPS for HV>70 or inducible AV block (I)<br>
+                Bifascicular block and +ILR (I)
+            </td>
+        </tr>
+        <tr class="w3-hover-light-grey">
+            <td><img src="media/rx/dICD.png"></td>
+            <td style="padding: 1vmax">
+                <span style="font-weight: 900;color: #b2843d;font-size: 2.5vmax">ICD for syncope with...</span><br>
+                VT and LVEF &le;35% (I) <br>
+                Prior MI and +EPS for VT (I) <br>
+                High-risks HCM (I)<br>
+                LQTs with adequate beta blockers (IIa)<br>
+                Spontaneous type I Brugada (IIa)
+            </td>
+        </tr>
+        <tr class="w3-hover-light-grey">
+            <td><img src="media/rx/Abl.png"></td>
+            <td style="font-size: 2.2vmax;padding: 1vmax">
+                <span style="font-weight: 900;color: #b2843d;font-size: 2.5vmax">Catheter ablation</span> 
+                for syncope due to SVT or VT (I)</td>
+        </tr>
+    </table></div>
+    
   
     <div class="w3-btn next" onmouseover="next(2)"></div>
 </div>
@@ -210,11 +193,10 @@
     </div> 
     
     <ul class="w3-ul w3-round-xlarge quickSand w3-hoverable" style="font-size: 2.2vmax;padding: 10vmax 5vmax 2vmax 5vmax;
-                margin: -7vmax 5vmax 0 5vmax;border: #f1f3f4 0.2vmax solid">
+                margin: -7vmax 5vmax 0 5vmax;border: #c0cfe3 0.2vmax solid">
         <li>Recurrent Syncope depends largely on MECHANISM rather than ETIOLOGY.</li>
         <li>Pacemaker is the most effective therapy for 
             syncope if the main mechanism is bradycardia. </li>
-        <li>Recurrent rate for reflex syncope varies from 20-70% in 1 year.</li>
         <li>Syncopal recurrences often decrease spontaneously after medical assessment, 
             even in the absence of a specific therapy; in general, syncope recurs in <50% 
             of patients within 1–2 years</li>

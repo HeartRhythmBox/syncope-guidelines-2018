@@ -3,6 +3,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="https://fonts.googleapis.com/css?family=Quicksand|BenchNine" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"> 
 <link rel="stylesheet" type="text/css" href="cssSyncope.css">
@@ -13,11 +14,22 @@
     display: block}
 .algo2 li:first-child, .algo2 li:nth-child(2), .algo2 li:nth-child(3), .algo2 li:nth-child(4),
 .algo2 li:nth-child(5), .algo2 li:nth-child(6) {display: block}
-.epBar {font-size: 2vmax;cursor: pointer;background: #b7cbe6;color: black;}
-.epBar :hover {background: #ababab}
-.epSlide {display: none;padding: 1vmax;}
-.epSlide img {width: 100%;padding: 1vmax 20%}
 
+.pass {
+    
+    -webkit-animation: slideRight 5s 1 ease; /* Safari 4.0 - 8.0 */
+    animation: slideRight 5s 1 ease-in-out;
+}
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes slideRight {
+    0% {transform: translateX(0%)}
+    100% {transform: translateX(37vw);opacity: 0.4}
+}
+
+@keyframes slideRight {
+    0% {transform: translateX(0%)}
+    100% {transform: translateX(37vw);opacity: 0.4}
+}
 
 </style>
 
@@ -146,26 +158,29 @@
     </div>
     <div class="w3-responsive">
     <table class="w3-table  w3-padding w3-bordered quickSand" style="line-height: 130%;font-size: 2vmax">
-        <tr class="w3-hover-light-grey">
+        <tr>
             <td style="width: 30vw"><img src="media/rx/PPM.jpg" style="opacity: 0.9"></td>
             <td style="padding: 1vmax">
-                <span style="font-weight: 900;color: #b2843d;font-size: 2.5vmax">PACEMAKER for syncope with...</span><br>
-                Symptomatic sinus node dysfunction (I)<br>
-                Asymptomatic sinus node dysfunction (IIa)<br>
-                High grade AV block(I)<br>
-                Bifascicular block and +EPS for HV>70 or inducible AV block (I)<br>
-                Bifascicular block and +ILR (I)
+                <span style="font-weight: 900;color: #b2843d;font-size: 2.5vmax">PACEMAKER for syncope with...</span>
+                <ul class="w3-ul w3-hoverable">
+                <li>Symptomatic sinus node dysfunction (I)</li>
+                <li>Asymptomatic sinus node dysfunction (IIa)</li>
+                <li>High grade AV block(I)</li>
+                <li>Bifascicular block and +EPS for HV>70 or inducible AV block (I)</li>
+                <li>Bifascicular block and +ILR (I)</li>
+                </ul>
             </td>
         </tr>
-        <tr class="w3-hover-light-grey">
+        <tr>
             <td><img src="media/rx/dICD.png"></td>
             <td style="padding: 1vmax">
                 <span style="font-weight: 900;color: #b2843d;font-size: 2.5vmax">ICD for syncope with...</span><br>
-                VT and LVEF &le;35% (I) <br>
-                Prior MI and +EPS for VT (I) <br>
-                High-risks HCM (I)<br>
-                LQTs with adequate beta blockers (IIa)<br>
-                Spontaneous type I Brugada (IIa)
+                <ul class="w3-ul w3-hoverable">
+                <li>VT and LVEF &le;35% (I) </li>
+                <li>Prior MI and +EPS for VT (I) </li>
+                <li>High-risks HCM (I)</li>
+                <li>LQTs with adequate beta blockers (IIa)</li>
+                <li>Spontaneous type I Brugada (IIa)</li>
             </td>
         </tr>
         <tr class="w3-hover-light-grey">
@@ -198,24 +213,51 @@
         <li>Pacemaker is the most effective therapy for 
             syncope if the main mechanism is bradycardia. </li>
         <li>Syncopal recurrences often decrease spontaneously after medical assessment, 
-            even in the absence of a specific therapy; in general, syncope recurs in <50% 
+            even in the absence of a specific therapy; in general, syncope recurs in &lt;50% 
             of patients within 1–2 years</li>
+        <li>Poor outcomes, including death, are related to the severity of the underlying 
+            disease rather than to syncope itself.</li>
     </div>
     
     <div class="w3-btn next" onmouseover="next(3)"></div>
 </div>
 
-<!--blk4 -->
-<div class="block"> 
+<!--blk4 driving-->
+<div class="block">  
+    <div class="w3-row quickSand" style="font-size: 4vmax;">
+        <div class="pass w3-col s4" style="text-align: right">
+        <i class="material-icons" style="font-size: 3vmax;color: #b2843d">directions_bike</i></div>
+        <div class="w3-col s8" style="padding-left: 0.5vmax">Driving Restriction</div>
+    </div>
+    <div class="w3-row w3-center w3-padding">
+    <span class="w3-button w3-center w3-dark-grey w3-round-large" onclick="document.getElementById('fullTable').style.display='block'" 
+        style="font-size: 1.5vmax;line-height: 100%">
+            More Details
+    </span></div>
     
+    <div id="fullTable" class="w3-modal">
+        <div class="w3-modal-content" style="width: 80%">
+            <div class="w3-container" style="padding: 4vmax">
+                <img src="media/rx/driving.png">
+                <span onclick="document.getElementById('fullTable').style.display='none'" 
+                class="w3-button w3-xlarge w3-display-topright">&times;</span>
+            </div>
+        </div>
+    </div>
+    <div class="w3-row w3-padding">
+    The risk of syncope related car accident is less than 1%/year.<br>
+    Generally, driving is allowed after "successful therapy is established" in most cases.<br>
+    For single or mild reflex syncope, NO driving restriction unless syncope occurred during driving. <br>
+    In a patient with syncope from cardiac arrhythmia or a patient who had ICD implanted, professinal
+    driving is permanently restricted.<br>
+    </div>
+
+    <a href="https://academic.oup.com/eurheartj/article/39/21/e43/4939242#117347585" target="_blank">
+        Practical Instructions for the 2018 ESC Guidelines for the diagnosis and management of syncope</a>
     <div class="w3-btn next" onmouseover="next(4)"></div>
 </div>
 
-<!--blk5 -->
-<div class="block" style="padding: 1vmax;"> 
-    
-    <div class="w3-btn next" onmouseover="next(5)"></div>
-</div>
+
 
 <!--end pointer div-->
 </div>
@@ -249,7 +291,7 @@ window.addEventListener("keydown", function(event) {
 
 window.ontouchmove = function () {unblur()}
 window.onscroll = function() {scroll()}
-window.onload = function () {showArray();showHide('epSlide',0)}
+window.onload = function () {showArray();}
 
 
 

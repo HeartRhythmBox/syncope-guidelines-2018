@@ -9,25 +9,26 @@
 <link rel="stylesheet" type="text/css" href="cssSyncope.css">
 </head>
 <style>
-.algo1 li, .algo2 li {border: none;display: none}
+.algo1 li, .algo2 li {border: none;display: none;padding: 0.5vmax}
 .algo1 li:first-child, .algo1 li:nth-child(2), .algo1 li:nth-child(3), .algo1 li:nth-child(4) {
     display: block}
 .algo2 li:first-child, .algo2 li:nth-child(2), .algo2 li:nth-child(3), .algo2 li:nth-child(4),
 .algo2 li:nth-child(5), .algo2 li:nth-child(6) {display: block}
 
+.pass {opacity: 0.3}
 .pass:hover {
-    
+    opacity: 0.9;
     -webkit-animation: slideRight 3s 1 ease; /* Safari 4.0 - 8.0 */
     animation: slideRight 3s 1 ease-in-out;
 }
 /* Safari 4.0 - 8.0 */
 @-webkit-keyframes slideRight {
-    0% {transform: translateX(0%)}
-    100% {transform: translateX(37vw);opacity: 0.4}
+    0% {transform: translateX(0%);}
+    100% {transform: translateX(80vw);opacity: 0.3}
 }
 
 @keyframes slideRight {
-    0% {transform: translateX(0%)}
+    0% {transform: translateX(0%);}
     100% {transform: translateX(80vw);opacity: 0.3}
 }
 
@@ -161,7 +162,7 @@
         <tr>
             <td style="width: 30vw"><img src="media/rx/PPM.jpg" style="opacity: 0.9"></td>
             <td style="padding: 1vmax">
-                <span style="font-weight: 900;color: #b2843d;font-size: 2.5vmax">PACEMAKER for syncope with...</span>
+                <span style="font-weight: 900;color: #8db2e4;font-size: 2.5vmax">PACEMAKER for syncope with...</span>
                 <ul class="w3-ul w3-hoverable">
                 <li>Symptomatic sinus node dysfunction (I)</li>
                 <li>Asymptomatic sinus node dysfunction (IIa)</li>
@@ -186,7 +187,7 @@
         <tr class="w3-hover-light-grey">
             <td><img src="media/rx/Abl.png"></td>
             <td style="font-size: 2.2vmax;padding: 1vmax">
-                <span style="font-weight: 900;color: #b2843d;font-size: 2.5vmax">Catheter ablation</span> 
+                <span style="font-weight: 900;color: #7c4c1b;font-size: 2.5vmax">Catheter ablation</span> 
                 for syncope due to SVT or VT (I)</td>
         </tr>
     </table></div>
@@ -207,8 +208,8 @@
     </div>
     </div> 
     
-    <ul class="w3-ul w3-round-xlarge quickSand w3-hoverable" style="font-size: 2.2vmax;padding: 10vmax 5vmax 2vmax 5vmax;
-                margin: -7vmax 5vmax 0 5vmax;border: #c0cfe3 0.2vmax solid">
+    <ul class="w3-ul w3-round-xlarge quickSand w3-hoverable" style="font-size: 2.2vmax;padding: 10vmax 5vmax 0 5vmax;
+                margin: -7vmax 5vmax 0vmax 5vmax;border: #c0cfe3 0.2vmax solid">
         <li>Recurrent Syncope depends largely on MECHANISM rather than ETIOLOGY.</li>
         <li>Pacemaker is the most effective therapy for 
             syncope if the main mechanism is bradycardia. </li>
@@ -223,19 +224,20 @@
 </div>
 
 <!--blk4 driving-->
-<div class="block">  
+<div class="block" style="padding-top: 2vmax">  
     <div class="w3-row quickSand" style="font-size: 4vmax;color: #b2843d">
-        <div class="pass w3-col s2 m4 l4">
-            <img src="media/rx/car.png" style="width: 18vw">
+        <div class="pass w3-col s3 m4 l4">
+            <img src="media/rx/car.png" style="width: 18vw;float: right;padding-right: 1vmax;
+            padding-top: 0.5vmax">
         </div>
-        <div class="w3-col s10 m8 l8" style="font-weight: 800">Driving Restriction</div>
+        <div class="w3-col s9 m8 l8" style="font-weight: 800;line-height: 100%">Driving Restriction</div>
     </div>
     <div class="w3-row w3-center w3-padding">
-    <span class="w3-button w3-center w3-dark-grey w3-round-large" onclick="document.getElementById('fullTable').style.display='block'" 
-        style="font-size: 1.5vmax;line-height: 100%">
-            More Details
+    <span class="w3-button w3-center w3-light-grey w3-round-large quickSand" onclick="document.getElementById('fullTable').style.display='block'" 
+        style="font-size: 1.5vmax;line-height: 100%;color: #797979">
+            full details
     </span></div>
-    <i class="material-icons" style="font-size: 3vmax;color: #b2843d">directions_bike</i>
+   
     <div id="fullTable" class="w3-modal">
         <div class="w3-modal-content" style="width: 80%">
             <div class="w3-container" style="padding: 4vmax">
@@ -245,16 +247,19 @@
             </div>
         </div>
     </div>
-    <div class="w3-row w3-padding">
-    The risk of syncope related car accident is less than 1%/year.<br>
-    Generally, driving is allowed after "successful therapy is established" in most cases.<br>
-    For single or mild reflex syncope, NO driving restriction unless syncope occurred during driving. <br>
-    In a patient with syncope from cardiac arrhythmia or a patient who had ICD implanted, professinal
-    driving is permanently restricted.<br>
+    <ul class="w3-ul w3-hoverable w3-padding quickSand" style="font-size: 2vmax;background: #ebf1fc;margin: 1vmax 5vw">
+        <li>The risk of syncope related car accident is less than 1%/year.</li>
+        <li>Generally, driving is allowed after "successful therapy is established" in most cases.</li>
+        <li>For single or mild reflex syncope, NO driving restriction unless 
+        syncope occurred during driving. </li>
+        <li>In a patient with syncope from cardiac arrhythmia or a patient who had ICD implanted, professinal
+    driving is permanently restricted.</li>
+    <a href="https://academic.oup.com/eurheartj/article/39/21/e43/4939242#117347585" target="_blank"
+        class="quickSand" style="font-size: 1vmax;padding-left: 1vmax;color: #797979">
+        Practical Instructions for the 2018 ESC Guidelines for the diagnosis and management of syncope</a>
     </div>
 
-    <a href="https://academic.oup.com/eurheartj/article/39/21/e43/4939242#117347585" target="_blank">
-        Practical Instructions for the 2018 ESC Guidelines for the diagnosis and management of syncope</a>
+    
     <div class="w3-btn next" onmouseover="next(4)"></div>
 </div>
 

@@ -10,13 +10,18 @@
 <style>
 
 .barContainer {margin-top: 12vh;width: 60%;padding-left: 30%;}
-.bar {height: 20vmax;background-color: black;margin: 0.5vmax;}
+.bar {height: 20vmax;background-color: black;margin: 0.5vmax;
+    transform-origin: bottom right}
 .bar2 {-ms-transform: rotate(10deg); /* IE 9 */
     -ms-transform-origin: bottom right;
     -webkit-transform: rotate(10deg); /* Safari 3-8 */
     -webkit-transform-origin: bottom right;
     transform: rotate(10deg);
     transform-origin: bottom right}
+.animate2 {
+    -webkit-animation: animateBar2 1s 1 ease;
+    animation: animateBar2 1s 1 ease;}
+
 .bar3 {
 -ms-transform: rotate(30deg); /* IE 9 */
 -ms-transform-origin: bottom right;
@@ -24,6 +29,10 @@
 -webkit-transform-origin: bottom right;
 transform: rotate(30deg);
 transform-origin: bottom right}
+.animate3 {
+    -webkit-animation: animateBar3 1s 1 ease;
+    animation: animateBar3 1s 1 ease;}
+
 .bar4 {
     -ms-transform: rotate(60deg); /* IE 9 */
     -ms-transform-origin: bottom right;
@@ -31,7 +40,38 @@ transform-origin: bottom right}
     -webkit-transform-origin: bottom right;
     transform: rotate(60deg);
     transform-origin: bottom right}
+.animate4 {
+    -webkit-animation: animateBar4 1s 1 ease;
+    animation: animateBar4 1s 1 ease;}
 
+@-webkit-keyframes animateBar2 {}
+@keyframes animateBar2 {
+    0% {transform: rotate(10deg)}
+    100% {transform: rotate(0deg);}
+}
+
+@-webkit-keyframes animateBar3 {}
+@keyframes animateBar3 {
+    0% {transform: rotate(30deg)}
+    100% {transform: rotate(0deg);}
+}
+
+@-webkit-keyframes animateBar4 {}
+@keyframes animateBar4 {
+    0% {transform: rotate(60deg)}
+    100% {transform: rotate(0deg);}
+}
+
+.tilted, .animated {padding-top: 15vh}
+.tilted {cursor: pointer;}
+.animated {display: none;width: 60%;padding-left: 30%;}
+#key {display: none;
+    animation: fade 3s ease-in-out;}
+
+@keyframes fade {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
 
 
 </style>
@@ -79,16 +119,77 @@ transform-origin: bottom right}
 </div>
 
 
+<!--key messages-->
+<div id="keyM" class="main" style="margin-bottom: 8vh">
+    <div class="barContainer tilted" onclick="animateBar()">
+            <div class="w3-col s1 bar"> </div>
+            <div class="w3-col s1 bar bar2"> </div>
+            <div class="w3-col s1 bar bar3"> </div>
+            <div class="w3-col s1 bar bar4"> </div>
+    </div>
+    
+    <div class="w3-row">
+    <div class="animated">
+        <div class="w3-col s1 bar"> </div>
+        <div class="w3-col s1 bar animate2"> </div>
+        <div class="w3-col s1 bar animate3"> </div>
+        <div class="w3-col s1 bar animate4"></div>
+    </div>
+
+    <div id='key' class="w3-col s10 quickSand"  style="font-size: 3vmax;padding-left: 1.5vmax;">
+        Key Messages
+        <ul class="w3-ul w3-hoverable" style="font-size: 2vmax;line-height: 120%;text-align: left;">
+            <li>Syncope = TLOC due to cerebral hypoperfusion <br>
+                TLOC = transient, unresponsive, unaware, and uncontrolled.</li>
+            <li>
+                Detailed history taking is extremely important in assessment and management of syncope.
+            </li>
+            <li>Establish correlation between symptoms and ECG/BP before providing treatment.</li>
+            <li>Poor prognosis is related to the underlying disease rather than syncope itself.</li>
+        </ul>
+    </div>
+    </div>
+       
+</div>
+
 <div class="bottomBar w3-center">
     <a href="index.html" title="home"><i class="fas fa-home"></i></a>
     <a href="https://www.facebook.com/HeartRhythmBox/" title="@HeartRhythmBox" style="color:  #3B5998;">
         <i title="@HeartRhythmBox" class="fab fa-facebook"></i></a>
     <a href="https://heartrhythmbox.github.io/main/" title="main collection">
     <img src="box transparent.png"></a>
-    <i class="fas fa-arrow-circle-up" title="to Top" style="color:#c0cfe3"></i>
+    <a href="#top">
+    <i class="fas fa-arrow-circle-up" title="to Top" style="color:#c0cfe3"></i></a>
 </div>
 
 <script>
+
+function animateBar() {
+    var hide = document.getElementsByClassName('tilted');
+    var show = document.getElementsByClassName('animated');
+    var bar = document.getElementsByClassName('animated')[0].children;
+    
+    hide[0].style.display = "none";
+    show[0].style.display = "block";
+    setTimeout(function(){
+        show[0].style.transition = "all 1s ease";
+        show[0].style.paddingLeft = "10%";
+        show[0].style.width = "40%";
+        bar[0].style.margin = "0.5vmax 0";
+        bar[1].style.margin = "0.5vmax 0 0.5vmax -2vw";
+        bar[2].style.margin = "0.5vmax 0 0.5vmax -2vw";
+        bar[3].style.margin = "0.5vmax 0 0.5vmax -2vw";
+        bar[1].style.transition = "all 0.2s ease";
+        bar[2].style.transition = "all 0.2s ease 0.1s";
+        bar[3].style.transition = "all 0.2s ease 0.2s"; 
+        document.getElementById('key').style.display = "block";
+        
+    }, 600);
+
+        
+}
+
+
 
 </script>	
 

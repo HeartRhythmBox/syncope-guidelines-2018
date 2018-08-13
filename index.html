@@ -120,7 +120,7 @@ transform-origin: bottom right}
 
 
 <!--key messages-->
-<div id="keyM" class="main" style="margin-bottom: 8vh">
+<div id="keyM" class="main" style="margin-bottom: 8vh;min-height: 75vh">
     <div class="barContainer tilted" onclick="animateBar()">
             <div class="w3-col s1 bar"> </div>
             <div class="w3-col s1 bar bar2"> </div>
@@ -136,16 +136,16 @@ transform-origin: bottom right}
         <div class="w3-col s1 bar animate4"></div>
     </div>
 
-    <div id='key' class="w3-col s10 quickSand"  style="font-size: 3vmax;padding-left: 1.5vmax;">
-        Key Messages
+    <div id='key' class="w3-col s10 quickSand"  style="padding-left: 1.5vmax;">
         <ul class="w3-ul w3-hoverable" style="font-size: 2vmax;line-height: 120%;text-align: left;">
+            <li style="font-size: 3vmax;padding-bottom: 1.5vmax;border: none">Key Messages</li>
             <li>Syncope = TLOC due to cerebral hypoperfusion <br>
                 TLOC = transient, unresponsive, unaware, and uncontrolled.</li>
             <li>
                 Detailed history taking is extremely important in assessment and management of syncope.
             </li>
-            <li>Establish correlation between symptoms and ECG/BP before providing treatment.</li>
-            <li>Poor prognosis is related to the underlying disease rather than syncope itself.</li>
+            <li>Try to establish correlation between symptoms and ECG/BP to provide specific treatment.</li>
+            <li>TALK to the patient. <br>Education is one of the most effective treatment for syncope.</li>
         </ul>
     </div>
     </div>
@@ -164,6 +164,7 @@ transform-origin: bottom right}
 
 <script>
 
+setTimeout(function() {animateBar()},3000);
 function animateBar() {
     var hide = document.getElementsByClassName('tilted');
     var show = document.getElementsByClassName('animated');

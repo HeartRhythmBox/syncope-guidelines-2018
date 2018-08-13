@@ -238,10 +238,10 @@ transform-origin: bottom right}
             Orthostatic Hypotension</span>
     </div>
    
-    <div class="w3-container" style="margin-top: 2vmax;">    
+    <div class="w3-container" style="margin-top: 1vmax;">    
         <img src="media/def/wordtrees.png">
         
-        <!--div id="wordtree_explicit" class="no768" style="overflow: auto;width: 100%;margin: auto"></div-->
+        <!--div id="wordtree_explicit" class="no768" style="overflow: auto;width: 100%;"></div-->
         
     </div>
 
@@ -311,10 +311,10 @@ google.charts.setOnLoadCallback(drawSimpleNodeChart);
 function drawSimpleNodeChart() {
 var nodeListData = new google.visualization.arrayToDataTable([
     ['id', 'childLabel', 'parent', 'size', { role: 'style' }],
-    [0, 'Low Brain Bloodflow', -1, 1, 'black'],
+    [0, '↓ Brain Bloodflow', -1, 1, 'black'],
     
-    [1, 'Low CO', 0, 1, '#797979'],
-    [2, 'Low Periph Resist', 0, 1, '#797979'],
+    [1, '↓ CO', 0, 1, '#797979'],
+    [2, '↓ Periph Resist', 0, 1, '#797979'],
 
     [3, 'Inapp Reflex', 2, 1, '#3366cc'],
     [4, 'ANS Failure', 2, 1, '#109618'],

@@ -103,9 +103,6 @@
     </a>
     </div>
 
-<!--pointer-->
-<div onclick="pointer()"><span class="pointer" style="display: none"></span> 
-
 <!--blk1 Reflex and OH -->
 <div id='rx' class="block"> 
     <div class="w3-row">
@@ -241,8 +238,8 @@
 </div>
 
 <!--blk4 driving-->
-<div class="block">  
-    <div class="w3-row quickSand" style="font-size: 4vmax;color: #b2843d">
+<div class="block" style="margin-bottom:1vh">  
+    <div class="w3-row w3-padding quickSand" style="font-size: 4vmax;color: #b2843d">
         <div class="pass w3-col s3 m4 l4">
             <img src="media/rx/car.png" style="width: 18vw;float: right;padding-right: 1vmax;
             padding-top: 0.5vmax">
@@ -275,12 +272,6 @@
         class="quickSand" style="font-size: 1vmax;padding-left: 1vmax;color: #797979">
         Practical Instructions for the 2018 ESC Guidelines for the diagnosis and management of syncope</a>
     </ul>
-
-    
-    <div class="w3-btn next" onmouseover="next(4)"></div>
-</div>
-
-<!--end pointer div-->
 </div>
 
 <div class="w3-row w3-center" style="padding: 1vmax">
@@ -303,13 +294,6 @@
 <script src="JF_next_pointer.js"></script>
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script>
-window.addEventListener("keydown", function(event) {
-        event.preventDefault();
-        if (event.keyCode===32) {
-        var p = document.getElementsByClassName("pointer");
-        p[0].style.display = "none";}
-    })
-
 window.addEventListener("keydown", function(event) {
         event.preventDefault();
         if (event.keyCode===27) {

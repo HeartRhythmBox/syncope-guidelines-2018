@@ -62,7 +62,7 @@
 .brown1Txt {color: #b2843d}
 .brown2Txt {color: #7c4c1b}
 
-.conceptList {font-size: 1.8vmax;visibility: hidden;border-collapse: collapse;}
+.conceptList {font-size: 1.8vmax;display: none;border-collapse: collapse;}
 .conceptList li {padding: 1vmax}
 .conceptList li :hover {background-color:lightgrey }
 .record {font-size: 2.5vmax;font-weight: 700;color: #b2843d}
@@ -190,15 +190,15 @@ a {text-decoration: none}
 <div onclick="pointer()"><span class="pointer" style="display: none"></span> 
 
 <!--blk1 concept-->
-<div id="test" class="block w3-container quickSand" style="background-color: #ebf1fc">    
+<div id="test" class="block w3-container quickSand" style="background-color: #ebf1fc;min-height: 90vh">    
     
     <div class="w3-row w3-wide w3-center" style="margin-top: 10vh;font-size: 5vmax;line-height: 100%;cursor: pointer;" 
-    onclick="document.getElementsByClassName('conceptList')[0].style.visibility = 'visible';
-        document.getElementsByClassName('conceptList')[1].style.visibility = 'visible'">
+    onclick="document.getElementsByClassName('conceptList')[0].style.display = 'block';
+        document.getElementsByClassName('conceptList')[1].style.display = 'block'">
             CONCEPT </div>
     <div class="w3-row quickSand w3-center lGTxt" style="font-size: 2vmax;cursor: pointer;"
-        onclick="document.getElementsByClassName('conceptList')[0].style.visibility = 'visible';
-        document.getElementsByClassName('conceptList')[1].style.visibility = 'visible'">
+        onclick="document.getElementsByClassName('conceptList')[0].style.display = 'block';
+        document.getElementsByClassName('conceptList')[1].style.display = 'block'">
             <em>to</em> <span class="brown1Txt" style="font-weight: 900">document</span> &bull; <em>to</em> 
             <span class="brown2Txt" style="font-weight: 900">provoke</span>
     </div>
@@ -615,10 +615,10 @@ padding-top: 290px;padding-bottom: 2vmax">
 
 <!--blk5 loop -->
 <div class="block" style="padding: 1vmax;background-color: #f1f3f4"> 
-    <div class="w3-row quickSand" style="padding: 2vmax;font-size: 4.5vmax">
+    <div class="w3-row quickSand" style="padding: 1vmax;font-size: 4.5vmax">
         ECG Monitoring
     </div>
-    <div class="w3-row quickSand" style="margin: 1vmax 0;">
+    <div class="w3-row quickSand" style="margin: 0.5vmax 0;">
         <div class="w3-col s4"  style="padding: 1vmax"><img src="media/test/holter.jpg">
         </div>
 

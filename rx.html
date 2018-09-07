@@ -48,7 +48,7 @@
     0% {transform: translateX(0%);}
     100% {transform: translateX(80vw);opacity: 0.3}
 }
-
+.hideFirst {display: none;font-size: 0.75vmax;line-height: 110%;text-align: left;padding: 0.25vmax}
 </style>
 
 <div class="main">
@@ -116,10 +116,16 @@
                 title="click here for more" onclick="showTheRest('algo1L')">
                 </i></li>
             <li class="w3-round-large algo1L" style="font-size: 2.2vmax;background-color: #f1f3f4;
-            padding: 0vmax" title="severe = when very frequent syncope alters quality of life; 
-            when recurrent syncope without, or with a very short, prodrome exposes the patient to a 
-            risk of trauma; 
-            and when syncope occurs during a high-risk activity.">Severe or Recurrent Form</li>
+            padding: 0vmax;cursor: pointer;"  
+            onmouseover="document.getElementById('severe').style.display='block'"
+            onmouseout="document.getElementById('severe').style.display='none'">
+            Severe or Recurrent Form
+            <div id='severe' class="hideFirst" >
+                severe = when very frequent syncope alters quality of life; 
+                when recurrent syncope without, or with a very short, prodrome exposes the patient to a 
+                risk of trauma;and when syncope occurs during a high-risk activity.    
+            </div>
+            </li>
             <li class="algo1L"><i class="fas fa-arrow-down" style="font-size:3vmax;;color: #3B5998"></i></li>
             <li class="algo1L" style="background-color:orange;color:white;font-size: 1.8vmax;">
                 Fludrocortisone or Midodrine for low BP type.(IIb)</li>
@@ -130,8 +136,14 @@
             <li class="algo1L" style="background-color:yellow;font-size: 1.8vmax;">
                 Stop or Reduce hypotensive drugs (IIa)</li>
             <li class="algo1L" style="background: linear-gradient(to bottom right, yellow 0%, orange 100%);
-            font-size: 1.8vmax" title="IIa for spontaneous, IIb for tilt-induced">
-                Cardiac Pacing (IIa-IIb) for dominant cardioinhibitory and age>40.</li>
+            font-size: 1.8vmax;cursor: pointer;" 
+            onmouseover="document.getElementById('pacing').style.display='block'"
+            onmouseout="document.getElementById('pacing').style.display='none'">
+            Cardiac Pacing (IIa-IIb) for dominant cardioinhibitory and age>40.
+            <div id='pacing' class="hideFirst" style="text-align: center">
+                IIa for spontaneous, IIb for tilt-induced.
+            </div>
+            </li>
         </ul>
         </div>
 
